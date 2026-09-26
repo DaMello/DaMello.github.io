@@ -1,3 +1,8 @@
+const personaFontLoader = document.createElement('script');
+personaFontLoader.src = './font-loader.js?v=20260926';
+personaFontLoader.async = true;
+document.head.appendChild(personaFontLoader);
+
 const translations = {
   en: {
     "nav.about":"About","nav.services":"Services","nav.work":"Work","nav.pricing":"Pricing","nav.contact":"Contact",
