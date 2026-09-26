@@ -108,3 +108,35 @@ if (!reduceMotion && window.matchMedia("(pointer:fine)").matches){
     if (code) code.style.transform = "rotate(2deg)";
   });
 }
+
+// Advanced motion layer: materials, scroll-driven transitions, magnetic UI and 3D interaction.
+(function loadMotionLayer(){
+  const stamp = '20260926-motion-v1';
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = `./motion.css?v=${stamp}`;
+  document.head.appendChild(link);
+
+  const loadLocal = () => {
+    if (document.querySelector('script[data-dm-motion]')) return;
+    const local = document.createElement('script');
+    local.src = `./motion.js?v=${stamp}`;
+    local.dataset.dmMotion = '1';
+    local.defer = true;
+    document.body.appendChild(local);
+  };
+
+  if (window.gsap && window.ScrollTrigger){ loadLocal(); return; }
+
+  const gs = document.createElement('script');
+  gs.src = 'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js';
+  gs.onload = () => {
+    const st = document.createElement('script');
+    st.src = 'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js';
+    st.onload = loadLocal;
+    st.onerror = loadLocal;
+    document.head.appendChild(st);
+  };
+  gs.onerror = loadLocal;
+  document.head.appendChild(gs);
+})();
