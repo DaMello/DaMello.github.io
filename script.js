@@ -1,25 +1,25 @@
 const translations = {
   en: {
-    "nav.about":"About","nav.services":"Services","nav.work":"Work","nav.pricing":"Pricing","nav.contact":"Contact",
-    "hero.open":"Open to remote work & freelance","hero.role":"Front-end developer · Web designer","hero.line1":"I design and build","hero.line2":"web experiences","hero.line3":"that feel polished.","hero.copy":"I combine front-end development, visual design and product thinking to create fast, responsive websites and interfaces.","hero.ctaWork":"See my work","hero.ctaTalk":"Let's talk","hero.meta1":"Based in Brasília, Brazil","hero.meta2":"English / Portuguese","hero.meta3":"Available remotely",
-    "stack.label":"Core stack",
-    "about.label":"About me","about.title":"Development with a designer's eye.","about.photo":"Building products, interfaces and websites from Brasília.","about.lead":"I like the point where design stops being a mockup and starts becoming something people can actually use.","about.body1":"My work combines HTML, CSS, JavaScript, React, responsive layouts, UI/UX and product thinking. I care about hierarchy, spacing, motion, speed and the small details that make a website feel finished.","about.body2":"I also use AI-assisted workflows to prototype, debug, test and iterate faster — while keeping the final decisions human and intentional.","about.fact1Title":"Remote-first","about.fact1Text":"Open to teams and clients worldwide.","about.fact2Title":"Product-minded","about.fact2Text":"I build beyond the screenshot.","about.fact3Title":"Real project experience","about.fact3Text":"Building and evolving Persona.",
-    "services.label":"Services","services.title":"What I can build for you.","services.s1t":"Landing pages","services.s1d":"Focused pages for launches, products and campaigns — responsive, polished and built around a clear goal.","services.s2t":"Business websites","services.s2d":"Modern multi-page websites for brands, professionals and small businesses that need a stronger online presence.","services.s3t":"Front-end development","services.s3d":"Responsive interfaces and product screens built with clean HTML, CSS, JavaScript and React.","services.s4t":"UI/UX implementation","services.s4d":"Turning designs and ideas into usable interfaces with strong hierarchy, spacing and interaction states.","services.s5t":"Polish, QA & optimization","services.s5d":"Fixes, responsive cleanup, visual polish, performance improvements and ongoing site updates.",
-    "work.label":"Selected work","work.title":"Real product work + portfolio experiments.","work.persona":"A conversational product where I work across front-end implementation, UI/UX, responsive behavior, product iteration and release polish.","work.live":"Open live project","work.demo1Title":"Commercial landing page","work.demo1":"A conversion-focused concept built to show structure, hierarchy, responsive behavior and visual polish.","work.demo2Title":"E-commerce interface","work.demo2":"A clean product browsing experience focused on responsive layout, shopping hierarchy and usability.","work.demo3Title":"SaaS dashboard","work.demo3":"A product interface concept showing components, information hierarchy and application states.","work.open":"Open demo",
-    "process.label":"How I work","process.title":"Clear process. Fewer surprises.","process.p1t":"Understand","process.p1d":"Goal, audience, references and the real problem the page needs to solve.","process.p2t":"Design","process.p2d":"Structure, hierarchy, visual direction, responsive states and interactions.","process.p3t":"Build","process.p3d":"Clean front-end implementation with reusable patterns and careful detail work.","process.p4t":"Refine","process.p4d":"Responsive QA, performance checks, polish and final delivery.",
-    "pricing.label":"Pricing","pricing.title":"Simple starting points.","pricing.note":"These are starting prices for smaller freelance projects. Final pricing depends on scope, content, complexity and deadline.","pricing.popular":"Most popular","pricing.p1k":"LANDING PAGE","pricing.p1d":"One-page responsive website for a product, service or campaign.","pricing.p2k":"BUSINESS SITE","pricing.p2d":"A complete website for a small business, professional or brand.","pricing.p3k":"CUSTOM FRONT-END","pricing.p3d":"Custom interfaces, product screens, React work or ongoing front-end support.","pricing.custom":"Let's talk","pricing.liResponsive":"Responsive design","pricing.liSections":"Up to 6 sections","pricing.liContact":"Contact / CTA integration","pricing.liPages":"Up to 5 pages","pricing.liBasicSeo":"Basic SEO setup","pricing.liComponents":"Reusable components","pricing.liInteraction":"Interactive UI","pricing.liGit":"Git-based delivery",
-    "contact.label":"Contact","contact.title":"Have a site to build or a role to fill?","contact.copy":"I'm available for remote junior front-end opportunities, freelance websites and selected product work.","contact.email":"Email me","contact.emailLabel":"Email","contact.locationLabel":"Location","contact.statusLabel":"Status","contact.status":"Open to remote work"
+    "nav.proof":"Proof","nav.persona":"Persona","nav.work":"Work","nav.about":"About","nav.contact":"Contact",
+    "hero.tag":"DESIGN • CODE • MOTION • PRODUCT","hero.line1":"Interfaces that","hero.line2":"feel alive.","hero.copy":"I design and build responsive web experiences where interface, motion and product thinking work as one system.","hero.cta":"Explore the work","hero.proofTitle":"Built, not mocked.","hero.proofText":"Real front-end + product work.","hero.scroll":"Scroll to interact",
+    "proof.eyebrow":"Not a résumé. A live demo.","proof.title1":"Don’t take my word for it.","proof.title2":"Touch the interface.","proof.copy":"The portfolio itself is part of the portfolio. Change the viewport, trigger states, drag objects and watch the layout respond.",
+    "lab.live":"LIVE","lab.rTitle":"Responsive system","lab.rText":"Resize a real interface state.","lab.mTitle":"Motion field","lab.mText":"Move your pointer through the field.","lab.sTitle":"State machine","lab.sText":"Switch a component through real states.","lab.stateReady":"Ready to talk.","lab.stateSub":"A small UI, four different behaviours.","lab.stateButton":"Change state",
+    "persona.copy":"A conversational product I build and evolve across front-end, responsive UI, interaction design, QA and product decisions.","persona.open":"Open personas.my",
+    "work.eyebrow":"Selected experiments","work.title1":"Three builds.","work.title2":"Three different problems.","work.lTitle":"Campaign page","work.lCopy":"Editorial hierarchy, conversion flow and motion-led storytelling.","work.cTitle":"Product experience","work.cCopy":"Responsive browsing, product focus and interaction states for shopping.","work.dTitle":"SaaS dashboard","work.dCopy":"Component systems, hierarchy, data density and application states.","work.open":"Open demo","work.nextTitle":"Your project?","work.nextCopy":"Give me a problem worth solving and I’ll make it feel intentional.","work.talk":"Start a project",
+    "about.eyebrow":"About / capabilities","about.title1":"I care about the parts","about.title2":"people can feel.","about.lead":"Spacing. Motion. Responsiveness. Speed. The transition nobody asked for but everyone notices when it’s missing.","about.c1t":"Front-end development","about.c1d":"HTML, CSS, JavaScript, React, responsive implementation and reusable UI.","about.c2t":"Web & product design","about.c2d":"Visual hierarchy, interface systems, prototyping and product thinking.","about.c3t":"Motion & polish","about.c3d":"Scroll choreography, micro-interactions, states, QA and performance.","about.c4t":"AI-assisted workflow","about.c4d":"Faster prototyping, debugging and iteration without handing over taste.",
+    "pricing.eyebrow":"Freelance / starting points","pricing.title1":"Clear scope.","pricing.title2":"No mystery invoice.","pricing.l":"LANDING PAGE","pricing.ld":"One focused, responsive page with motion and a clear conversion goal.","pricing.s":"BUSINESS SITE","pricing.sd":"A complete web presence with responsive pages, polish and basic SEO.","pricing.f":"CUSTOM FRONT-END","pricing.talk":"Let’s talk","pricing.fd":"Product UI, React work, custom interactions or an ongoing front-end role.",
+    "contact.eyebrow":"Let’s make the next thing.","contact.line1":"Have a role,","contact.line2":"project or impossible idea?","contact.copy":"I’m open to remote junior front-end roles, freelance websites and product work.","contact.available":"Available remotely"
   },
   pt: {
-    "nav.about":"Sobre","nav.services":"Serviços","nav.work":"Projetos","nav.pricing":"Preços","nav.contact":"Contato",
-    "hero.open":"Disponível para trabalho remoto e freelas","hero.role":"Desenvolvedor front-end · Web designer","hero.line1":"Eu desenho e construo","hero.line2":"experiências web","hero.line3":"com acabamento de verdade.","hero.copy":"Uno desenvolvimento front-end, design visual e visão de produto para criar sites e interfaces rápidos, responsivos e bem resolvidos.","hero.ctaWork":"Ver meus projetos","hero.ctaTalk":"Vamos conversar","hero.meta1":"Brasília, Brasil","hero.meta2":"Inglês / Português","hero.meta3":"Disponível remotamente",
-    "stack.label":"Stack principal",
-    "about.label":"Sobre mim","about.title":"Desenvolvimento com olhar de designer.","about.photo":"Criando produtos, interfaces e sites a partir de Brasília.","about.lead":"Eu gosto do ponto em que o design deixa de ser só um mockup e vira algo que as pessoas realmente conseguem usar.","about.body1":"Meu trabalho mistura HTML, CSS, JavaScript, React, layouts responsivos, UI/UX e visão de produto. Eu presto atenção em hierarquia, espaçamento, movimento, velocidade e nos pequenos detalhes que fazem um site parecer realmente terminado.","about.body2":"Também uso fluxos assistidos por IA para prototipar, depurar, testar e iterar mais rápido — mantendo as decisões finais humanas e intencionais.","about.fact1Title":"Remoto primeiro","about.fact1Text":"Aberto a equipes e clientes no mundo todo.","about.fact2Title":"Visão de produto","about.fact2Text":"Eu construo além do screenshot.","about.fact3Title":"Experiência real","about.fact3Text":"Construindo e evoluindo o Persona.",
-    "services.label":"Serviços","services.title":"O que eu posso construir para você.","services.s1t":"Landing pages","services.s1d":"Páginas focadas em lançamentos, produtos e campanhas — responsivas, bem acabadas e construídas em torno de um objetivo claro.","services.s2t":"Sites para negócios","services.s2d":"Sites modernos com várias páginas para marcas, profissionais e pequenos negócios que precisam melhorar sua presença online.","services.s3t":"Desenvolvimento front-end","services.s3d":"Interfaces responsivas e telas de produto construídas com HTML, CSS, JavaScript e React.","services.s4t":"Implementação UI/UX","services.s4d":"Transformo designs e ideias em interfaces usáveis com boa hierarquia, espaçamento e estados de interação.","services.s5t":"Polimento, QA e otimização","services.s5d":"Correções, ajustes de responsividade, acabamento visual, performance e atualizações contínuas.",
-    "work.label":"Projetos selecionados","work.title":"Produto real + experimentos de portfólio.","work.persona":"Um produto conversacional em que trabalho com implementação front-end, UI/UX, responsividade, iteração de produto e polimento de releases.","work.live":"Abrir projeto ao vivo","work.demo1Title":"Landing page comercial","work.demo1":"Um conceito focado em conversão para mostrar estrutura, hierarquia, responsividade e acabamento visual.","work.demo2Title":"Interface de e-commerce","work.demo2":"Uma experiência limpa de navegação de produtos focada em layout responsivo, hierarquia de compra e usabilidade.","work.demo3Title":"Dashboard SaaS","work.demo3":"Um conceito de interface de produto mostrando componentes, hierarquia de informação e estados de aplicação.","work.open":"Abrir demo",
-    "process.label":"Como eu trabalho","process.title":"Processo claro. Menos surpresas.","process.p1t":"Entender","process.p1d":"Objetivo, público, referências e o problema real que a página precisa resolver.","process.p2t":"Desenhar","process.p2d":"Estrutura, hierarquia, direção visual, estados responsivos e interações.","process.p3t":"Construir","process.p3d":"Implementação front-end limpa com padrões reutilizáveis e atenção aos detalhes.","process.p4t":"Refinar","process.p4d":"QA responsivo, checagens de performance, polimento e entrega final.",
-    "pricing.label":"Preços","pricing.title":"Pontos de partida simples.","pricing.note":"Estes são valores iniciais para freelas menores. O preço final depende do escopo, conteúdo, complexidade e prazo.","pricing.popular":"Mais popular","pricing.p1k":"LANDING PAGE","pricing.p1d":"Site responsivo de uma página para produto, serviço ou campanha.","pricing.p2k":"SITE EMPRESARIAL","pricing.p2d":"Site completo para pequeno negócio, profissional ou marca.","pricing.p3k":"FRONT-END SOB MEDIDA","pricing.p3d":"Interfaces personalizadas, telas de produto, trabalho em React ou suporte front-end contínuo.","pricing.custom":"Vamos conversar","pricing.liResponsive":"Design responsivo","pricing.liSections":"Até 6 seções","pricing.liContact":"Integração de contato / CTA","pricing.liPages":"Até 5 páginas","pricing.liBasicSeo":"Configuração básica de SEO","pricing.liComponents":"Componentes reutilizáveis","pricing.liInteraction":"UI interativa","pricing.liGit":"Entrega via Git",
-    "contact.label":"Contato","contact.title":"Tem um site para construir ou uma vaga para preencher?","contact.copy":"Estou disponível para oportunidades remotas de front-end júnior, sites freelance e projetos selecionados de produto.","contact.email":"Me mande um e-mail","contact.emailLabel":"E-mail","contact.locationLabel":"Local","contact.statusLabel":"Status","contact.status":"Disponível para trabalho remoto"
+    "nav.proof":"Prova","nav.persona":"Persona","nav.work":"Projetos","nav.about":"Sobre","nav.contact":"Contato",
+    "hero.tag":"DESIGN • CÓDIGO • MOTION • PRODUTO","hero.line1":"Interfaces que","hero.line2":"parecem vivas.","hero.copy":"Eu desenho e construo experiências web responsivas em que interface, movimento e visão de produto funcionam como um único sistema.","hero.cta":"Explorar o trabalho","hero.proofTitle":"Construído, não mockado.","hero.proofText":"Front-end + produto de verdade.","hero.scroll":"Role para interagir",
+    "proof.eyebrow":"Não é currículo. É uma demo ao vivo.","proof.title1":"Não precisa acreditar em mim.","proof.title2":"Mexa na interface.","proof.copy":"O próprio portfólio faz parte do portfólio. Mude o viewport, acione estados, mova objetos e veja o layout responder.",
+    "lab.live":"AO VIVO","lab.rTitle":"Sistema responsivo","lab.rText":"Redimensione um estado real de interface.","lab.mTitle":"Campo de motion","lab.mText":"Mova o ponteiro pelo campo.","lab.sTitle":"Máquina de estados","lab.sText":"Alterne um componente entre estados reais.","lab.stateReady":"Pronto para conversar.","lab.stateSub":"Uma UI pequena, quatro comportamentos.","lab.stateButton":"Mudar estado",
+    "persona.copy":"Um produto conversacional que eu construo e evoluo entre front-end, UI responsiva, design de interação, QA e decisões de produto.","persona.open":"Abrir personas.my",
+    "work.eyebrow":"Experimentos selecionados","work.title1":"Três builds.","work.title2":"Três problemas diferentes.","work.lTitle":"Página de campanha","work.lCopy":"Hierarquia editorial, fluxo de conversão e narrativa guiada por motion.","work.cTitle":"Experiência de produto","work.cCopy":"Navegação responsiva, foco no produto e estados de interação para compras.","work.dTitle":"Dashboard SaaS","work.dCopy":"Sistemas de componentes, hierarquia, densidade de dados e estados de aplicação.","work.open":"Abrir demo","work.nextTitle":"Seu projeto?","work.nextCopy":"Me dê um problema que valha resolver e eu faço ele parecer intencional.","work.talk":"Começar um projeto",
+    "about.eyebrow":"Sobre / capacidades","about.title1":"Eu ligo para as partes","about.title2":"que as pessoas sentem.","about.lead":"Espaçamento. Movimento. Responsividade. Velocidade. Aquela transição que ninguém pediu, mas todo mundo percebe quando não existe.","about.c1t":"Desenvolvimento front-end","about.c1d":"HTML, CSS, JavaScript, React, implementação responsiva e UI reutilizável.","about.c2t":"Web & product design","about.c2d":"Hierarquia visual, sistemas de interface, prototipagem e visão de produto.","about.c3t":"Motion & polimento","about.c3d":"Coreografia de scroll, microinterações, estados, QA e performance.","about.c4t":"Fluxo assistido por IA","about.c4d":"Prototipagem, debugging e iteração mais rápidos sem terceirizar o bom gosto.",
+    "pricing.eyebrow":"Freelance / pontos de partida","pricing.title1":"Escopo claro.","pricing.title2":"Nada de fatura misteriosa.","pricing.l":"LANDING PAGE","pricing.ld":"Uma página focada, responsiva, com motion e um objetivo claro de conversão.","pricing.s":"SITE EMPRESARIAL","pricing.sd":"Presença web completa com páginas responsivas, acabamento e SEO básico.","pricing.f":"FRONT-END SOB MEDIDA","pricing.talk":"Vamos conversar","pricing.fd":"UI de produto, React, interações customizadas ou uma função contínua de front-end.",
+    "contact.eyebrow":"Vamos construir a próxima coisa.","contact.line1":"Tem uma vaga,","contact.line2":"projeto ou ideia impossível?","contact.copy":"Estou disponível para vagas remotas de front-end júnior, sites freelance e trabalho de produto.","contact.available":"Disponível remotamente"
   }
 };
 
@@ -30,7 +30,7 @@ function applyLanguage(lang){
   language = lang;
   document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
   document.querySelectorAll("[data-i18n]").forEach((el) => {
-    const value = translations[lang][el.dataset.i18n];
+    const value = translations[lang]?.[el.dataset.i18n];
     if (value) el.textContent = value;
   });
   if (toggle){
@@ -39,104 +39,55 @@ function applyLanguage(lang){
   }
   localStorage.setItem("dm-lang", lang);
 }
-
 applyLanguage(language);
 toggle?.addEventListener("click", () => applyLanguage(language === "en" ? "pt" : "en"));
 
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const miniBrowser = document.getElementById("miniBrowser");
+document.querySelectorAll(".device-btn").forEach((button) => {
+  button.addEventListener("click", () => {
+    document.querySelectorAll(".device-btn").forEach((b) => b.classList.remove("active"));
+    button.classList.add("active");
+    miniBrowser?.setAttribute("data-size", button.dataset.size || "desktop");
+  });
+});
 
-if (!reduceMotion){
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting){
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      }
+const statePreview = document.getElementById("statePreview");
+const stateAction = document.getElementById("stateAction");
+const stateDots = [...document.querySelectorAll(".state-dots i")];
+const stateStrong = statePreview?.querySelector(".state-copy strong");
+const stateSub = statePreview?.querySelector(".state-copy p");
+const stateLabels = {
+  en:[["Ready to talk.","A small UI, four different behaviours."],["Thinking…","The state changes without breaking hierarchy."],["New memory saved.","Feedback arrives where the user expects it."],["Back online.","Recovery should feel calm, not dramatic."]],
+  pt:[["Pronto para conversar.","Uma UI pequena, quatro comportamentos."],["Pensando…","O estado muda sem quebrar a hierarquia."],["Nova memória salva.","O feedback aparece onde o usuário espera."],["Online de novo.","Recuperação deve parecer calma, não dramática."]]
+};
+let stateIndex = 0;
+function renderState(){
+  if (!statePreview) return;
+  statePreview.classList.remove("state-1","state-2","state-3");
+  if (stateIndex) statePreview.classList.add(`state-${stateIndex}`);
+  const labels = stateLabels[language] || stateLabels.en;
+  if (stateStrong) stateStrong.textContent = labels[stateIndex][0];
+  if (stateSub) stateSub.textContent = labels[stateIndex][1];
+  stateDots.forEach((dot,i)=>dot.classList.toggle("active",i===stateIndex));
+}
+stateAction?.addEventListener("click",()=>{stateIndex=(stateIndex+1)%4;renderState()});
+toggle?.addEventListener("click",()=>requestAnimationFrame(renderState));
+
+const motionField = document.getElementById("motionField");
+const fieldOrbs = motionField ? [...motionField.querySelectorAll(".field-orb")] : [];
+if (motionField && matchMedia("(pointer:fine)").matches && !matchMedia("(prefers-reduced-motion: reduce)").matches){
+  motionField.addEventListener("pointermove",(event)=>{
+    const r=motionField.getBoundingClientRect();
+    const px=(event.clientX-r.left)/r.width-.5;
+    const py=(event.clientY-r.top)/r.height-.5;
+    fieldOrbs.forEach((orb,i)=>{
+      const depth=(i+1)*8;
+      orb.style.transform=`translate3d(${px*depth*2.2}px,${py*depth*1.7}px,0) rotate(${px*(i%2?8:-8)}deg)`;
     });
-  }, { threshold: 0.12 });
-  document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
-} else {
-  document.querySelectorAll(".reveal").forEach((el) => el.classList.add("visible"));
+    motionField.style.setProperty("--fx",`${event.clientX-r.left}px`);
+    motionField.style.setProperty("--fy",`${event.clientY-r.top}px`);
+  });
+  motionField.addEventListener("pointerleave",()=>fieldOrbs.forEach(orb=>orb.style.transform=""));
 }
 
-const cursor = document.querySelector(".cursor");
-if (cursor && window.matchMedia("(pointer:fine)").matches && !reduceMotion){
-  document.body.classList.add("cursor-ready");
-  let tx = innerWidth / 2;
-  let ty = innerHeight / 2;
-  let x = tx;
-  let y = ty;
-
-  addEventListener("mousemove", (event) => {
-    tx = event.clientX;
-    ty = event.clientY;
-  }, { passive: true });
-
-  const animateCursor = () => {
-    x += (tx - x) * 0.2;
-    y += (ty - y) * 0.2;
-    cursor.style.left = `${x}px`;
-    cursor.style.top = `${y}px`;
-    requestAnimationFrame(animateCursor);
-  };
-  animateCursor();
-
-  document.querySelectorAll("a, button").forEach((el) => {
-    el.addEventListener("mouseenter", () => document.body.classList.add("cursor-link"));
-    el.addEventListener("mouseleave", () => document.body.classList.remove("cursor-link"));
-  });
-}
-
-if (!reduceMotion && window.matchMedia("(pointer:fine)").matches){
-  const visual = document.querySelector(".hero-visual");
-  const profile = document.querySelector(".profile-card");
-  const browser = document.querySelector(".browser-card");
-  const code = document.querySelector(".code-card");
-
-  visual?.addEventListener("mousemove", (event) => {
-    const rect = visual.getBoundingClientRect();
-    const px = (event.clientX - rect.left) / rect.width - 0.5;
-    const py = (event.clientY - rect.top) / rect.height - 0.5;
-    if (profile) profile.style.transform = `translate(${px * 10}px, ${py * 8}px) rotate(-3deg)`;
-    if (browser) browser.style.transform = `translate(${px * -9}px, ${py * -7}px) rotate(2.3deg)`;
-    if (code) code.style.transform = `translate(${px * 7}px, ${py * -6}px) rotate(2deg)`;
-  });
-
-  visual?.addEventListener("mouseleave", () => {
-    if (profile) profile.style.transform = "rotate(-3deg)";
-    if (browser) browser.style.transform = "rotate(2.3deg)";
-    if (code) code.style.transform = "rotate(2deg)";
-  });
-}
-
-// Advanced motion layer: materials, scroll-driven transitions, magnetic UI and 3D interaction.
-(function loadMotionLayer(){
-  const stamp = '20260926-motion-v1';
-  const link = document.createElement('link');
-  link.rel = 'stylesheet';
-  link.href = `./motion.css?v=${stamp}`;
-  document.head.appendChild(link);
-
-  const loadLocal = () => {
-    if (document.querySelector('script[data-dm-motion]')) return;
-    const local = document.createElement('script');
-    local.src = `./motion.js?v=${stamp}`;
-    local.dataset.dmMotion = '1';
-    local.defer = true;
-    document.body.appendChild(local);
-  };
-
-  if (window.gsap && window.ScrollTrigger){ loadLocal(); return; }
-
-  const gs = document.createElement('script');
-  gs.src = 'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js';
-  gs.onload = () => {
-    const st = document.createElement('script');
-    st.src = 'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js';
-    st.onload = loadLocal;
-    st.onerror = loadLocal;
-    document.head.appendChild(st);
-  };
-  gs.onerror = loadLocal;
-  document.head.appendChild(gs);
-})();
+window.addEventListener("DOMContentLoaded",()=>{if(window.lucide)window.lucide.createIcons()});
