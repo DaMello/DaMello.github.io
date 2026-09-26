@@ -1,40 +1,22 @@
-# Davi Mello — Portfolio
+# DaMello.github.io
 
-Front-end developer & web designer portfolio.
+Front-end developer & web designer portfolio — projects, demos and experiments.
 
-## Live
+## Live portfolio
+https://damello.github.io/
 
-**https://damello.github.io/**
+## Focus
+- Front-end development
+- Web design
+- Responsive interfaces
+- React / JavaScript / HTML / CSS
+- UI/UX implementation
 
-## What is inside
+## Demos
+- https://damello.github.io/demo1/
+- https://damello.github.io/demo2/
+- https://damello.github.io/demo3/
 
-- English-first portfolio with EN/PT translation toggle
-- Responsive design for desktop, tablet and mobile
-- Custom desktop cursor
-- Animated hero + moving project reel
-- About, services, selected work, pricing and contact
-- Demo routes prepared at `/demo1`, `/demo2` and `/demo3`
-
-## Stack
-
-- HTML5
-- CSS3
-- Vanilla JavaScript
-- GitHub Pages
-
-## Structure
-
-```text
-/
-├── index.html
-├── styles.css
-├── script.js
-├── demo1/
-├── demo2/
-├── demo3/
-└── README.md
-```
-
-## Next
-
-The demo folders are placeholders for future portfolio projects. Each one can become an independent HTML/CSS/JS or built React project.
+## Contact
+- Email: davimello.persona@gmail.com
+- GitHub: https://github.com/DaMello
