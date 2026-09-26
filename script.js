@@ -40,12 +40,20 @@ function applyLanguage(lang){
 function initLucide(){if(window.lucide)window.lucide.createIcons()}
 
 function initCursor(){
- const cursor=document.querySelector('.cursor');if(!cursor||!finePointer||reduceMotion)return;
+ const cursor=document.querySelector('.cursor');
+ const desktopCustom=!!cursor&&finePointer&&innerWidth>900;
+ const safety=document.createElement('style');
+ safety.dataset.cursorSafety='true';
+ safety.textContent='@media(pointer:fine){body:not(.cursor-ready),body:not(.cursor-ready) *{cursor:auto!important}body.cursor-ready,body.cursor-ready *{cursor:none!important}}body.cursor-ready .cursor{display:grid!important;opacity:1!important}@media(prefers-reduced-motion:reduce) and (min-width:901px){body.cursor-ready .cursor{display:grid!important}}';
+ document.head.appendChild(safety);
+ if(!desktopCustom){document.body.classList.remove('cursor-ready');return}
+ document.body.classList.add('cursor-ready');
+ cursor.style.display='grid';cursor.style.opacity='1';
  let x=innerWidth/2,y=innerHeight/2,cx=x,cy=y;
- addEventListener('pointermove',e=>{x=e.clientX;y=e.clientY},{passive:true});
- const tick=()=>{cx+=(x-cx)*.2;cy+=(y-cy)*.2;cursor.style.left=cx+'px';cursor.style.top=cy+'px';requestAnimationFrame(tick)};tick();
+ addEventListener('pointermove',e=>{x=e.clientX;y=e.clientY;if(reduceMotion){cursor.style.left=x+'px';cursor.style.top=y+'px'}},{passive:true});
+ if(reduceMotion){cursor.style.left=x+'px';cursor.style.top=y+'px'}else{const tick=()=>{cx+=(x-cx)*.2;cy+=(y-cy)*.2;cursor.style.left=cx+'px';cursor.style.top=cy+'px';requestAnimationFrame(tick)};tick()}
  document.querySelectorAll('a,button,.motion-card,.price-card,.demo-card,.t-avatar').forEach(el=>{el.addEventListener('pointerenter',()=>cursor.classList.add('is-big'));el.addEventListener('pointerleave',()=>cursor.classList.remove('is-big'))});
- addEventListener('pointerdown',()=>cursor.classList.add('is-down'));addEventListener('pointerup',()=>cursor.classList.remove('is-down'));
+ addEventListener('pointerdown',()=>cursor.classList.add('is-down'));addEventListener('pointerup',()=>cursor.classList.remove('is-down'));addEventListener('blur',()=>cursor.classList.remove('is-down'));
 }
 
 function initHeaderAndProgress(){
@@ -134,4 +142,4 @@ function init(){
  document.getElementById('langToggle')?.addEventListener('click',()=>applyLanguage(language==='en'?'pt':'en'));
 }
 
-document.addEventListener('DOMContentLoaded',init);
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
