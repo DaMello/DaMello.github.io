@@ -3,368 +3,292 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0a0b0d" />
-  <meta name="description" content="Davi Mello — Front-end Developer & Web Designer. Responsive websites, landing pages and product interfaces." />
-  <title>Davi Mello — Front-end Developer & Web Designer</title>
+  <meta name="theme-color" content="#f4eee5" />
+  <meta name="description" content="Davi Mello — Front-end developer and web designer. Interactive portfolio, product work and web experiments." />
+  <title>Davi Mello — Design, Code & Motion</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=20260926-v2" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css?v=20260926-v4" />
+  <link rel="stylesheet" href="./motion.css?v=20260926-v4" />
 </head>
 <body>
+  <div class="page-progress" aria-hidden="true"><i></i></div>
   <div class="cursor" aria-hidden="true"><span>O</span></div>
 
   <header class="site-header">
-    <div class="shell nav-shell">
+    <div class="nav-wrap">
       <a class="brand" href="#top" aria-label="Davi Mello home">
-        <span class="brand-mark">DM</span>
-        <span class="brand-copy">Davi Mello</span>
+        <span class="brand-word">DaMello</span><i></i>
       </a>
       <nav class="nav-links" aria-label="Main navigation">
-        <a href="#about" data-i18n="nav.about">About</a>
-        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#proof" data-i18n="nav.proof">Proof</a>
+        <a href="#persona" data-i18n="nav.persona">Persona</a>
         <a href="#work" data-i18n="nav.work">Work</a>
-        <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
+        <a href="#about" data-i18n="nav.about">About</a>
       </nav>
       <div class="nav-actions">
-        <a class="nav-contact" href="#contact" data-i18n="nav.contact">Contact</a>
         <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">PT</button>
+        <a class="contact-pill magnetic" href="#contact"><span data-i18n="nav.contact">Contact</span><span aria-hidden="true">↗</span></a>
       </div>
     </div>
   </header>
 
   <main id="top">
-    <section class="hero shell">
-      <div class="hero-copy reveal">
-        <div class="status-pill">
-          <span class="status-dot"></span>
-          <span data-i18n="hero.open">Open to remote work & freelance</span>
-        </div>
-        <p class="hero-overline" data-i18n="hero.role">Front-end developer · Web designer</p>
-        <h1>
-          <span data-i18n="hero.line1">I design and build</span>
-          <strong data-i18n="hero.line2">web experiences</strong>
-          <span data-i18n="hero.line3">that feel polished.</span>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-room" aria-hidden="true">
+        <svg class="studio-svg" viewBox="0 0 1200 760" role="img" aria-label="Animated creative coding studio illustration">
+          <g class="draw-lines room-lines">
+            <path d="M80 650H1150M80 115H1140M80 115V650M645 115V650M1140 115V650"/>
+            <path d="M110 170H610M675 170H1100M110 610H610M675 610H1100"/>
+            <path d="M210 115V650M985 115V650" opacity=".34"/>
+          </g>
+          <g class="draw-lines lamps">
+            <path d="M230 115v42h190v-42M795 115v42h190v-42"/>
+            <path d="M248 157h154l-26 24H274zM813 157h154l-26 24H839z"/>
+          </g>
+          <g class="draw-lines desk-left">
+            <path d="M155 520h390M188 520v90M518 520v90"/>
+            <path d="M250 368h220l-15 145H225z"/>
+            <path d="M272 391h178l-10 93H252z"/>
+            <path d="M330 520v-44h70v44M207 470h42v50M475 475h35v45"/>
+          </g>
+          <g class="draw-lines desk-right">
+            <path d="M700 520h380M730 520v90M1052 520v90"/>
+            <path d="M850 340h188v152H850zM866 359h156v112H866z"/>
+            <path d="M807 480h43M1038 480h28M910 520v-28h68v28"/>
+          </g>
+          <g class="draw-lines person-a">
+            <circle cx="365" cy="300" r="40"/>
+            <path d="M330 286c22-25 59-28 79-3M332 305c13 20 56 27 72 0"/>
+            <path d="M349 340c-35 32-54 74-48 126M382 340c35 28 50 73 47 128"/>
+            <path d="M314 394c-35 18-53 44-72 75M416 397c25 8 46 29 59 50"/>
+            <path d="M240 468c23 5 47 9 70 13M475 447c-25 14-50 28-75 39"/>
+          </g>
+          <g class="draw-lines person-b">
+            <circle cx="825" cy="305" r="39"/>
+            <path d="M792 294c16-29 59-33 79-4M800 320c18 16 48 16 65 0"/>
+            <path d="M811 343c-35 28-51 70-47 125M842 344c34 32 48 72 45 124"/>
+            <path d="M778 400c-38 17-53 44-67 72M876 404c31 13 43 35 56 61"/>
+            <path d="M711 472c24 4 48 8 72 13M932 465c-22 7-45 15-68 25"/>
+          </g>
+          <g class="draw-lines wall-ui">
+            <rect x="520" y="260" width="82" height="98" rx="8"/>
+            <path d="M535 284h50M535 302h38M535 328h47"/>
+            <rect x="1010" y="225" width="90" height="72" rx="8"/>
+            <path d="M1027 247h57M1027 267h36"/>
+          </g>
+          <g class="persona-cube draw-lines">
+            <path d="M585 214l50-28 50 28v58l-50 28-50-28z"/>
+            <path d="M585 214l50 29 50-29M635 243v57M603 205l64 75M667 205l-64 75"/>
+          </g>
+        </svg>
+        <div class="shape shape-blue shape-a"></div>
+        <div class="shape shape-blue shape-b"></div>
+        <div class="shape shape-orange shape-c"></div>
+        <div class="shape shape-black shape-d"></div>
+        <div class="pointer pointer-a">↖</div>
+        <div class="pointer pointer-b">↗</div>
+        <div class="ui-float ui-float-a"><span></span><b>motion()</b><i></i><i></i></div>
+        <div class="ui-float ui-float-b"><small>UI STATE</small><strong>03</strong><span>ACTIVE</span></div>
+      </div>
+
+      <div class="hero-scrim" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="hero-tag hero-enter"><span>•</span><span data-i18n="hero.tag">DESIGN • CODE • MOTION • PRODUCT</span></div>
+        <h1 id="hero-title" class="hero-title">
+          <span class="hero-line hero-enter" data-i18n="hero.line1">Interfaces that</span>
+          <em class="hero-line hero-enter" data-i18n="hero.line2">feel alive.</em>
         </h1>
-        <p class="hero-description" data-i18n="hero.copy">I combine front-end development, visual design and product thinking to create fast, responsive websites and interfaces.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#work">
-            <span data-i18n="hero.ctaWork">See my work</span>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-          <a class="button secondary" href="mailto:davimello.persona@gmail.com" data-i18n="hero.ctaTalk">Let's talk</a>
-        </div>
-        <div class="hero-meta">
-          <div><span>01</span><p data-i18n="hero.meta1">Based in Brasília, Brazil</p></div>
-          <div><span>02</span><p data-i18n="hero.meta2">English / Portuguese</p></div>
-          <div><span>03</span><p data-i18n="hero.meta3">Available remotely</p></div>
+        <p class="hero-copy hero-enter" data-i18n="hero.copy">I design and build responsive web experiences where interface, motion and product thinking work as one system.</p>
+        <div class="hero-bottom hero-enter">
+          <a class="hero-cta magnetic" href="#proof"><span data-i18n="hero.cta">Explore the work</span><b>↘</b></a>
+          <div class="hero-proof">
+            <div class="avatar-stack">
+              <img src="https://avatars.githubusercontent.com/u/207860932?v=4" alt="Davi Mello" />
+              <span>DM</span><span>UI</span><span>FE</span>
+            </div>
+            <p><strong data-i18n="hero.proofTitle">Built, not mocked.</strong><span data-i18n="hero.proofText">Real front-end + product work.</span></p>
+          </div>
         </div>
       </div>
-
-      <div class="hero-visual reveal" aria-label="Portfolio visual preview">
-        <div class="visual-grid"></div>
-        <div class="profile-card float-card">
-          <div class="profile-photo-wrap">
-            <img src="https://avatars.githubusercontent.com/u/207860932?v=4" alt="Davi Mello" class="profile-photo" />
-          </div>
-          <div class="profile-card-copy">
-            <span class="mini-label">DESIGN + CODE</span>
-            <strong>Davi Mello</strong>
-            <small>Front-end / UI</small>
-          </div>
-        </div>
-
-        <div class="browser-card float-card">
-          <div class="browser-bar"><i></i><i></i><i></i><span>damello.dev</span></div>
-          <div class="browser-body">
-            <div class="browser-sidebar">
-              <span class="active"></span><span></span><span></span><span></span>
-            </div>
-            <div class="browser-content">
-              <div class="browser-badge">RESPONSIVE UI</div>
-              <div class="browser-title-line"></div>
-              <div class="browser-title-line short"></div>
-              <div class="browser-cards"><span></span><span></span><span></span></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="code-card float-card">
-          <div class="code-top">
-            <span>&lt;/&gt;</span>
-            <small>frontend.tsx</small>
-          </div>
-          <div class="code-lines">
-            <i class="w95"></i><i class="w72"></i><i class="w88"></i><i class="w58"></i><i class="w80"></i>
-          </div>
-        </div>
-
-        <div class="floating-badge badge-react">React</div>
-        <div class="floating-badge badge-ui">UI / UX</div>
-        <div class="floating-badge badge-ai">AI</div>
-      </div>
+      <div class="scroll-cue hero-enter"><span data-i18n="hero.scroll">Scroll to interact</span><i></i></div>
     </section>
 
-    <section class="stack-strip">
-      <div class="shell stack-strip-inner">
-        <span class="stack-label" data-i18n="stack.label">Core stack</span>
-        <div class="stack-items" aria-label="Core technologies">
-          <span><b>JS</b> JavaScript</span>
-          <span><b>RE</b> React</span>
-          <span><b>HT</b> HTML</span>
-          <span><b>CS</b> CSS</span>
-          <span><b>GI</b> Git</span>
-          <span><b>UX</b> UI/UX</span>
-        </div>
+    <section class="proof-section" id="proof">
+      <div class="proof-intro shell">
+        <p class="eyebrow invert" data-i18n="proof.eyebrow">Not a résumé. A live demo.</p>
+        <h2 class="display-title invert"><span data-i18n="proof.title1">Don’t take my word for it.</span> <em data-i18n="proof.title2">Touch the interface.</em></h2>
+        <p class="section-copy invert" data-i18n="proof.copy">The portfolio itself is part of the portfolio. Change the viewport, trigger states, drag objects and watch the layout respond.</p>
       </div>
-    </section>
 
-    <section class="section about" id="about">
-      <div class="shell">
-        <div class="section-head">
-          <span class="section-index">01</span>
-          <div>
-            <p class="eyebrow" data-i18n="about.label">About me</p>
-            <h2 data-i18n="about.title">Development with a designer's eye.</h2>
-          </div>
+      <div class="lab-shell shell">
+        <div class="lab-toolbar">
+          <div><i></i><i></i><i></i><span>interaction-lab.html</span></div>
+          <span class="lab-status"><b></b><span data-i18n="lab.live">LIVE</span></span>
         </div>
-
-        <div class="about-layout">
-          <div class="about-photo-card">
-            <img src="https://avatars.githubusercontent.com/u/207860932?v=4" alt="Portrait of Davi Mello" />
-            <div class="photo-caption">
-              <span class="persona-type">DM / 2026</span>
-              <p data-i18n="about.photo">Building products, interfaces and websites from Brasília.</p>
+        <div class="lab-grid">
+          <article class="lab-card responsive-lab">
+            <div class="lab-card-head"><div><span>01</span><h3 data-i18n="lab.rTitle">Responsive system</h3></div><p data-i18n="lab.rText">Resize a real interface state.</p></div>
+            <div class="device-controls" role="group" aria-label="Preview width">
+              <button class="device-btn active" type="button" data-size="desktop"><span>▭</span>Desktop</button>
+              <button class="device-btn" type="button" data-size="tablet"><span>▯</span>Tablet</button>
+              <button class="device-btn" type="button" data-size="phone"><span>▯</span>Phone</button>
             </div>
-          </div>
-
-          <div class="about-content">
-            <p class="about-lead" data-i18n="about.lead">I like the point where design stops being a mockup and starts becoming something people can actually use.</p>
-            <p data-i18n="about.body1">My work combines HTML, CSS, JavaScript, React, responsive layouts, UI/UX and product thinking. I care about hierarchy, spacing, motion, speed and the small details that make a website feel finished.</p>
-            <p data-i18n="about.body2">I also use AI-assisted workflows to prototype, debug, test and iterate faster — while keeping the final decisions human and intentional.</p>
-
-            <div class="about-facts">
-              <article>
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"/><path d="M3.6 9h16.8M3.6 15h16.8M12 3c2.2 2.5 3.3 5.5 3.3 9S14.2 18.5 12 21M12 3C9.8 5.5 8.7 8.5 8.7 12S9.8 18.5 12 21"/></svg>
-                <div><strong data-i18n="about.fact1Title">Remote-first</strong><span data-i18n="about.fact1Text">Open to teams and clients worldwide.</span></div>
-              </article>
-              <article>
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 9-5 3 5 3M16 9l5 3-5 3M14 5l-4 14"/></svg>
-                <div><strong data-i18n="about.fact2Title">Product-minded</strong><span data-i18n="about.fact2Text">I build beyond the screenshot.</span></div>
-              </article>
-              <article>
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19h16M6 16V8l6-4 6 4v8M9 16v-5h6v5"/></svg>
-                <div><strong data-i18n="about.fact3Title">Real project experience</strong><span data-i18n="about.fact3Text">Building and evolving Persona.</span></div>
-              </article>
+            <div class="responsive-stage">
+              <div class="mini-browser" id="miniBrowser">
+                <div class="mini-browser-top"><i></i><i></i><i></i><span>persona.ui</span></div>
+                <div class="mini-browser-body">
+                  <aside><b></b><span></span><span></span><span></span></aside>
+                  <main><div class="mini-kicker"></div><div class="mini-title"></div><div class="mini-title short"></div><div class="mini-grid"><i></i><i></i><i></i><i></i></div></main>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+          </article>
 
-    <section class="section services-section" id="services">
-      <div class="shell">
-        <div class="section-head light-head">
-          <span class="section-index">02</span>
-          <div>
-            <p class="eyebrow" data-i18n="services.label">Services</p>
-            <h2 data-i18n="services.title">What I can build for you.</h2>
-          </div>
-        </div>
+          <article class="lab-card motion-lab">
+            <div class="lab-card-head"><div><span>02</span><h3 data-i18n="lab.mTitle">Motion field</h3></div><p data-i18n="lab.mText">Move your pointer through the field.</p></div>
+            <div class="motion-field" id="motionField" aria-label="Interactive motion field">
+              <div class="field-orb orb-1">UI</div><div class="field-orb orb-2">JS</div><div class="field-orb orb-3">CSS</div><div class="field-orb orb-4">UX</div>
+              <div class="field-center"><span>MOVE</span><b>→</b></div>
+            </div>
+          </article>
 
-        <div class="services-grid">
-          <article class="service-card">
-            <div class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 9v11"/></svg></div>
-            <span>01</span>
-            <h3 data-i18n="services.s1t">Landing pages</h3>
-            <p data-i18n="services.s1d">Focused pages for launches, products and campaigns — responsive, polished and built around a clear goal.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V7l8-4 8 4v13M8 20v-6h8v6M4 9h16"/></svg></div>
-            <span>02</span>
-            <h3 data-i18n="services.s2t">Business websites</h3>
-            <p data-i18n="services.s2d">Modern multi-page websites for brands, professionals and small businesses that need a stronger online presence.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 9-5 3 5 3M16 9l5 3-5 3M14 5l-4 14"/></svg></div>
-            <span>03</span>
-            <h3 data-i18n="services.s3t">Front-end development</h3>
-            <p data-i18n="services.s3d">Responsive interfaces and product screens built with clean HTML, CSS, JavaScript and React.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="4"/></svg></div>
-            <span>04</span>
-            <h3 data-i18n="services.s4t">UI/UX implementation</h3>
-            <p data-i18n="services.s4d">Turning designs and ideas into usable interfaces with strong hierarchy, spacing and interaction states.</p>
-          </article>
-          <article class="service-card wide-card">
-            <div class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8"/><circle cx="12" cy="12" r="3"/></svg></div>
-            <span>05</span>
-            <h3 data-i18n="services.s5t">Polish, QA & optimization</h3>
-            <p data-i18n="services.s5d">Fixes, responsive cleanup, visual polish, performance improvements and ongoing site updates.</p>
-            <div class="service-mini-visual" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
+          <article class="lab-card state-lab">
+            <div class="lab-card-head"><div><span>03</span><h3 data-i18n="lab.sTitle">State machine</h3></div><p data-i18n="lab.sText">Switch a component through real states.</p></div>
+            <div class="state-preview" id="statePreview">
+              <div class="state-avatar">P</div>
+              <div class="state-copy"><small>PERSONA</small><strong data-i18n="lab.stateReady">Ready to talk.</strong><p data-i18n="lab.stateSub">A small UI, four different behaviours.</p></div>
+              <button class="state-action" id="stateAction" type="button"><span data-i18n="lab.stateButton">Change state</span><b>↻</b></button>
+            </div>
+            <div class="state-dots"><i class="active"></i><i></i><i></i><i></i></div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section work-section" id="work">
-      <div class="shell">
-        <div class="section-head">
-          <span class="section-index">03</span>
-          <div>
-            <p class="eyebrow" data-i18n="work.label">Selected work</p>
-            <h2 data-i18n="work.title">Real product work + portfolio experiments.</h2>
-          </div>
+    <section class="persona-case" id="persona">
+      <div class="persona-sticky">
+        <div class="persona-case-copy">
+          <p class="eyebrow">01 / REAL PRODUCT</p>
+          <h2>Persona<span>.</span></h2>
+          <p data-i18n="persona.copy">A conversational product I build and evolve across front-end, responsive UI, interaction design, QA and product decisions.</p>
+          <div class="case-tags"><span>Front-end</span><span>UI/UX</span><span>Responsive</span><span>Product</span></div>
+          <a class="case-link magnetic" href="https://personas.my" target="_blank" rel="noreferrer"><span data-i18n="persona.open">Open personas.my</span><b>↗</b></a>
         </div>
 
-        <article class="featured-project">
-          <div class="project-copy">
-            <div class="project-tag-row"><span class="project-tag">REAL PRODUCT</span><span>2024 — NOW</span></div>
-            <h3>Persona</h3>
-            <p data-i18n="work.persona">A conversational product where I work across front-end implementation, UI/UX, responsive behavior, product iteration and release polish.</p>
-            <div class="project-points">
-              <span>Responsive UI</span><span>Product design</span><span>Front-end</span><span>QA</span>
+        <div class="persona-stage" aria-hidden="true">
+          <div class="scene-label"><span>SCENE</span><strong id="sceneNumber">01</strong><em id="sceneName">DISCOVER</em></div>
+          <div class="persona-desktop">
+            <div class="pd-top"><strong>Persona</strong><div><i></i><i></i><i></i></div></div>
+            <div class="pd-layout">
+              <aside><span class="active"></span><span></span><span></span><span></span><span></span></aside>
+              <main>
+                <div class="pd-discover scene-ui scene-discover">
+                  <div class="pd-search"><i></i></div>
+                  <div class="pd-cards"><span><b></b><i></i></span><span><b></b><i></i></span><span><b></b><i></i></span><span><b></b><i></i></span></div>
+                </div>
+                <div class="pd-chat scene-ui scene-chat">
+                  <div class="chat-head"><b></b><i></i><i></i></div>
+                  <div class="messages"><span class="them"></span><span class="me"></span><span class="them wide"></span></div>
+                  <div class="composer"><i></i><b></b></div>
+                </div>
+                <div class="pd-world scene-ui scene-world">
+                  <div class="world-hero"><b></b><span></span></div><div class="world-grid"><i></i><i></i><i></i></div>
+                </div>
+              </main>
             </div>
-            <a class="text-link" href="https://personas.my" target="_blank" rel="noreferrer">
-              <span data-i18n="work.live">Open live project</span>
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
-            </a>
           </div>
-          <div class="project-showcase" aria-hidden="true">
-            <div class="persona-window persona-window-main">
-              <div class="persona-top"><span>Persona</span><i></i><i></i></div>
-              <div class="persona-search"></div>
-              <div class="persona-grid"><span></span><span></span><span></span><span></span></div>
-            </div>
-            <div class="persona-phone">
-              <div class="phone-notch"></div>
-              <div class="phone-card"></div>
-              <div class="phone-lines"><i></i><i></i><i></i></div>
-            </div>
-            <div class="persona-bubble">More stories,<br>less walls.</div>
+          <div class="persona-phone">
+            <div class="phone-island"></div>
+            <div class="phone-content"><div class="phone-top"></div><div class="phone-card-a"></div><div class="phone-card-b"></div><div class="phone-nav"><i></i><i></i><i></i><i></i></div></div>
           </div>
-        </article>
+          <div class="persona-quote">More stories,<br><span>less walls.</span></div>
+        </div>
 
-        <div class="demo-grid">
-          <article class="demo-card demo-one">
-            <div class="demo-visual" aria-hidden="true">
-              <div class="demo-nav"><span></span><span></span><span></span></div>
-              <div class="demo-copy-lines"><b></b><b></b><i></i></div>
-              <div class="demo-button"></div>
-            </div>
-            <div class="demo-copy">
-              <span>DEMO 01 · LANDING</span>
-              <h3 data-i18n="work.demo1Title">Commercial landing page</h3>
-              <p data-i18n="work.demo1">A conversion-focused concept built to show structure, hierarchy, responsive behavior and visual polish.</p>
-              <a class="text-link" href="./demo1/"><span data-i18n="work.open">Open demo</span><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
-            </div>
+        <div class="persona-steps">
+          <span class="active">01</span><span>02</span><span>03</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="work-section" id="work">
+      <div class="work-heading shell">
+        <p class="eyebrow" data-i18n="work.eyebrow">Selected experiments</p>
+        <h2 class="display-title"><span data-i18n="work.title1">Three builds.</span> <em data-i18n="work.title2">Three different problems.</em></h2>
+      </div>
+      <div class="horizontal-wrap">
+        <div class="horizontal-track" id="workTrack">
+          <article class="work-card card-landing">
+            <div class="work-card-copy"><span>01 / LANDING</span><h3 data-i18n="work.lTitle">Campaign page</h3><p data-i18n="work.lCopy">Editorial hierarchy, conversion flow and motion-led storytelling.</p><a href="./demo1/"><span data-i18n="work.open">Open demo</span><b>↗</b></a></div>
+            <div class="work-visual landing-preview"><div class="lp-nav"><i></i><span></span><span></span><span></span></div><div class="lp-copy"><b></b><b class="short"></b><i></i></div><div class="lp-art"><span></span><span></span><span></span></div></div>
           </article>
-
-          <article class="demo-card demo-two">
-            <div class="demo-visual commerce-visual" aria-hidden="true">
-              <div class="product-image"></div>
-              <div class="product-meta"><i></i><i></i><b></b></div>
-            </div>
-            <div class="demo-copy">
-              <span>DEMO 02 · COMMERCE</span>
-              <h3 data-i18n="work.demo2Title">E-commerce interface</h3>
-              <p data-i18n="work.demo2">A clean product browsing experience focused on responsive layout, shopping hierarchy and usability.</p>
-              <a class="text-link" href="./demo2/"><span data-i18n="work.open">Open demo</span><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
-            </div>
+          <article class="work-card card-commerce">
+            <div class="work-card-copy"><span>02 / COMMERCE</span><h3 data-i18n="work.cTitle">Product experience</h3><p data-i18n="work.cCopy">Responsive browsing, product focus and interaction states for shopping.</p><a href="./demo2/"><span data-i18n="work.open">Open demo</span><b>↗</b></a></div>
+            <div class="work-visual commerce-preview"><div class="cp-product"></div><div class="cp-meta"><span></span><span class="short"></span><b></b></div><div class="cp-chip">ADD →</div></div>
           </article>
-
-          <article class="demo-card demo-three">
-            <div class="demo-visual dashboard-visual" aria-hidden="true">
-              <div class="dash-sidebar"></div>
-              <div class="dash-main"><i></i><div><b></b><b></b><b></b></div><span></span></div>
-            </div>
-            <div class="demo-copy">
-              <span>DEMO 03 · PRODUCT UI</span>
-              <h3 data-i18n="work.demo3Title">SaaS dashboard</h3>
-              <p data-i18n="work.demo3">A product interface concept showing components, information hierarchy and application states.</p>
-              <a class="text-link" href="./demo3/"><span data-i18n="work.open">Open demo</span><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
-            </div>
+          <article class="work-card card-dashboard">
+            <div class="work-card-copy"><span>03 / PRODUCT UI</span><h3 data-i18n="work.dTitle">SaaS dashboard</h3><p data-i18n="work.dCopy">Component systems, hierarchy, data density and application states.</p><a href="./demo3/"><span data-i18n="work.open">Open demo</span><b>↗</b></a></div>
+            <div class="work-visual dashboard-preview"><aside><i></i><i></i><i></i><i></i></aside><main><div class="dp-head"><b></b><span></span></div><div class="dp-stats"><i></i><i></i><i></i></div><div class="dp-chart"><span></span></div></main></div>
+          </article>
+          <article class="work-card card-next">
+            <div class="work-card-copy"><span>04 / NEXT</span><h3 data-i18n="work.nextTitle">Your project?</h3><p data-i18n="work.nextCopy">Give me a problem worth solving and I’ll make it feel intentional.</p><a href="#contact"><span data-i18n="work.talk">Start a project</span><b>→</b></a></div>
+            <div class="next-orbit"><i></i><i></i><i></i><strong>?</strong></div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section process-section">
-      <div class="shell">
-        <div class="section-head compact-head">
-          <span class="section-index">04</span>
-          <div><p class="eyebrow" data-i18n="process.label">How I work</p><h2 data-i18n="process.title">Clear process. Fewer surprises.</h2></div>
+    <section class="about-section" id="about">
+      <div class="shell about-grid">
+        <div class="about-visual">
+          <div class="about-photo"><img src="https://avatars.githubusercontent.com/u/207860932?v=4" alt="Davi Mello" /></div>
+          <div class="about-badge"><span>DM</span><p>DESIGN<br>+ CODE</p></div>
+          <div class="about-note">Brasília → worldwide</div>
         </div>
-        <div class="process-grid">
-          <article><span>01</span><div class="process-icon">✦</div><h3 data-i18n="process.p1t">Understand</h3><p data-i18n="process.p1d">Goal, audience, references and the real problem the page needs to solve.</p></article>
-          <article><span>02</span><div class="process-icon">⌁</div><h3 data-i18n="process.p2t">Design</h3><p data-i18n="process.p2d">Structure, hierarchy, visual direction, responsive states and interactions.</p></article>
-          <article><span>03</span><div class="process-icon">&lt;/&gt;</div><h3 data-i18n="process.p3t">Build</h3><p data-i18n="process.p3d">Clean front-end implementation with reusable patterns and careful detail work.</p></article>
-          <article><span>04</span><div class="process-icon">✓</div><h3 data-i18n="process.p4t">Refine</h3><p data-i18n="process.p4d">Responsive QA, performance checks, polish and final delivery.</p></article>
+        <div class="about-copy-block">
+          <p class="eyebrow" data-i18n="about.eyebrow">About / capabilities</p>
+          <h2 class="display-title"><span data-i18n="about.title1">I care about the parts</span> <em data-i18n="about.title2">people can feel.</em></h2>
+          <p class="about-lead" data-i18n="about.lead">Spacing. Motion. Responsiveness. Speed. The transition nobody asked for but everyone notices when it’s missing.</p>
+          <div class="capability-list">
+            <article><span>01</span><div><h3 data-i18n="about.c1t">Front-end development</h3><p data-i18n="about.c1d">HTML, CSS, JavaScript, React, responsive implementation and reusable UI.</p></div><b>↗</b></article>
+            <article><span>02</span><div><h3 data-i18n="about.c2t">Web & product design</h3><p data-i18n="about.c2d">Visual hierarchy, interface systems, prototyping and product thinking.</p></div><b>↗</b></article>
+            <article><span>03</span><div><h3 data-i18n="about.c3t">Motion & polish</h3><p data-i18n="about.c3d">Scroll choreography, micro-interactions, states, QA and performance.</p></div><b>↗</b></article>
+            <article><span>04</span><div><h3 data-i18n="about.c4t">AI-assisted workflow</h3><p data-i18n="about.c4d">Faster prototyping, debugging and iteration without handing over taste.</p></div><b>↗</b></article>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section pricing-section" id="pricing">
-      <div class="shell">
-        <div class="section-head light-head">
-          <span class="section-index">05</span>
-          <div><p class="eyebrow" data-i18n="pricing.label">Pricing</p><h2 data-i18n="pricing.title">Simple starting points.</h2></div>
-        </div>
-        <p class="pricing-intro" data-i18n="pricing.note">These are starting prices for smaller freelance projects. Final pricing depends on scope, content, complexity and deadline.</p>
-        <div class="pricing-grid">
-          <article class="price-card">
-            <div class="price-top"><span data-i18n="pricing.p1k">LANDING PAGE</span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg></div>
-            <h3>$149<span>+</span></h3>
-            <p data-i18n="pricing.p1d">One-page responsive website for a product, service or campaign.</p>
-            <ul><li data-i18n="pricing.liResponsive">Responsive design</li><li data-i18n="pricing.liSections">Up to 6 sections</li><li data-i18n="pricing.liContact">Contact / CTA integration</li></ul>
-          </article>
-          <article class="price-card featured-price">
-            <div class="price-top"><span data-i18n="pricing.p2k">BUSINESS SITE</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V7l8-4 8 4v13M8 20v-6h8v6"/></svg></div>
-            <div class="popular-tag" data-i18n="pricing.popular">Most popular</div>
-            <h3>$349<span>+</span></h3>
-            <p data-i18n="pricing.p2d">A complete website for a small business, professional or brand.</p>
-            <ul><li data-i18n="pricing.liPages">Up to 5 pages</li><li data-i18n="pricing.liResponsive">Responsive design</li><li data-i18n="pricing.liBasicSeo">Basic SEO setup</li></ul>
-          </article>
-          <article class="price-card">
-            <div class="price-top"><span data-i18n="pricing.p3k">CUSTOM FRONT-END</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 9-5 3 5 3M16 9l5 3-5 3M14 5l-4 14"/></svg></div>
-            <h3 data-i18n="pricing.custom">Let's talk</h3>
-            <p data-i18n="pricing.p3d">Custom interfaces, product screens, React work or ongoing front-end support.</p>
-            <ul><li data-i18n="pricing.liComponents">Reusable components</li><li data-i18n="pricing.liInteraction">Interactive UI</li><li data-i18n="pricing.liGit">Git-based delivery</li></ul>
-          </article>
-        </div>
+    <section class="pricing-section" id="pricing">
+      <div class="shell pricing-head">
+        <p class="eyebrow" data-i18n="pricing.eyebrow">Freelance / starting points</p>
+        <h2 class="display-title"><span data-i18n="pricing.title1">Clear scope.</span> <em data-i18n="pricing.title2">No mystery invoice.</em></h2>
+      </div>
+      <div class="shell pricing-grid">
+        <article class="price-card magnetic-card"><span>01</span><div><small data-i18n="pricing.l">LANDING PAGE</small><h3>$149<sup>+</sup></h3><p data-i18n="pricing.ld">One focused, responsive page with motion and a clear conversion goal.</p></div><a href="mailto:davimello.persona@gmail.com?subject=Landing%20Page%20Project">↗</a></article>
+        <article class="price-card featured magnetic-card"><span>02</span><div><small data-i18n="pricing.s">BUSINESS SITE</small><h3>$349<sup>+</sup></h3><p data-i18n="pricing.sd">A complete web presence with responsive pages, polish and basic SEO.</p></div><a href="mailto:davimello.persona@gmail.com?subject=Business%20Site%20Project">↗</a></article>
+        <article class="price-card magnetic-card"><span>03</span><div><small data-i18n="pricing.f">CUSTOM FRONT-END</small><h3 data-i18n="pricing.talk">Let’s talk</h3><p data-i18n="pricing.fd">Product UI, React work, custom interactions or an ongoing front-end role.</p></div><a href="mailto:davimello.persona@gmail.com?subject=Front-end%20Project">↗</a></article>
       </div>
     </section>
 
     <section class="contact-section" id="contact">
-      <div class="shell contact-grid">
-        <div class="contact-copy">
-          <span class="section-index">06</span>
-          <p class="eyebrow" data-i18n="contact.label">Contact</p>
-          <h2 data-i18n="contact.title">Have a site to build or a role to fill?</h2>
-          <p data-i18n="contact.copy">I'm available for remote junior front-end opportunities, freelance websites and selected product work.</p>
-          <div class="contact-actions">
-            <a class="button primary large" href="mailto:davimello.persona@gmail.com"><span data-i18n="contact.email">Email me</span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            <a class="button secondary large" href="https://github.com/DaMello" target="_blank" rel="noreferrer">GitHub</a>
-          </div>
-        </div>
-        <aside class="contact-card">
-          <div class="contact-card-top">
-            <img src="https://avatars.githubusercontent.com/u/207860932?v=4" alt="Davi Mello" />
-            <div><span class="persona-type">DM</span><strong>Davi Mello</strong><small>Front-end developer & web designer</small></div>
-          </div>
-          <div class="contact-info-row"><span data-i18n="contact.emailLabel">Email</span><a href="mailto:davimello.persona@gmail.com">davimello.persona@gmail.com</a></div>
-          <div class="contact-info-row"><span data-i18n="contact.locationLabel">Location</span><p>Brasília, Brazil</p></div>
-          <div class="contact-info-row"><span data-i18n="contact.statusLabel">Status</span><p class="available"><i></i><span data-i18n="contact.status">Open to remote work</span></p></div>
-        </aside>
+      <div class="contact-orbit orbit-one" aria-hidden="true"></div><div class="contact-orbit orbit-two" aria-hidden="true"></div>
+      <div class="shell contact-inner">
+        <p class="eyebrow invert" data-i18n="contact.eyebrow">Let’s make the next thing.</p>
+        <h2><span data-i18n="contact.line1">Have a role,</span><br><em data-i18n="contact.line2">project or impossible idea?</em></h2>
+        <p data-i18n="contact.copy">I’m open to remote junior front-end roles, freelance websites and product work.</p>
+        <a class="contact-email magnetic" href="mailto:davimello.persona@gmail.com"><span>davimello.persona@gmail.com</span><b>↗</b></a>
+        <div class="contact-meta"><span>Brasília, Brazil</span><span>EN / PT-BR</span><a href="https://github.com/DaMello" target="_blank" rel="noreferrer">GitHub ↗</a><span class="available"><i></i><span data-i18n="contact.available">Available remotely</span></span></div>
       </div>
-      <footer class="shell footer">
-        <span>DAVI MELLO © 2026</span>
-        <span>DESIGN + CODE</span>
-      </footer>
+      <footer class="shell footer"><span>DAVΙ MELLO © 2026</span><span>DESIGN · CODE · MOTION</span></footer>
     </section>
   </main>
 
-  <script src="./script.js?v=20260926-v2"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="./script.js?v=20260926-v4"></script>
+  <script src="./motion.js?v=20260926-v4"></script>
 </body>
 </html>
