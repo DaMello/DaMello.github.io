@@ -1,117 +1,412 @@
-const translations={
- en:{
-  "nav.work":"Work","nav.motion":"Motion","nav.pricing":"Pricing","nav.github":"GitHub","nav.contact":"Contact",
-  "hero.kicker":"CREATIVE FRONT-END • PRODUCT DESIGN • MOTION","hero.hello":"Hello,","hero.iam":"I am Davi.","hero.sub":"I design and build websites and product interfaces where visual systems, motion and front-end engineering work together.","hero.meta1":"Remote worldwide","hero.meta2":"English / Portuguese","hero.scroll":"Scroll to meet me",
-  "about.kicker":"ABOUT / PROFILE","about.titleA":"I build digital products that","about.titleB":"feel intentional.","about.copy":"I work across front-end development, product design, motion systems, responsive QA and visual direction. I use AI as an accelerator for iteration and problem-solving — not as a substitute for taste.","about.available":"Available for remote work","cap.front":"Front-end engineering","cap.frontCopy":"Responsive interfaces, reusable components, performance and browser QA.","cap.product":"Product design","cap.productCopy":"Hierarchy, flows, systems and interaction decisions that survive implementation.","cap.motion":"Motion systems","cap.motionCopy":"Scroll choreography, micro-interactions, transitions and meaningful feedback.","cap.ai":"AI workflows","cap.aiCopy":"Fast prototyping, debugging and iteration while keeping human direction in control.",
-  "motion.title":"Motion should explain the interface.","motion.copy":"Not decoration. Not a reel. Each scene below is running live in the browser and can be interacted with.","motion.resize":"Responsive geometry","motion.resizeCopy":"One component changes shape without losing hierarchy or rhythm.","motion.tabs":"State that travels","motion.tabsCopy":"Selection moves through the interface instead of blinking between unrelated states.","motion.avatar":"Neighbour-aware hover","motion.avatarCopy":"Nearby items react with falloff, so the group behaves like one physical system.","motion.clear":"Dissolve feedback","motion.clearCopy":"Even removing text can communicate what changed and where the state went.","motion.stack":"Context in depth","motion.stackCopy":"Updates stack with hierarchy and expand without becoming visual noise.","motion.morph":"Surface morph","motion.morphCopy":"A small control grows into a useful surface without feeling like a modal interruption.","motion.toggle":"Change size","motion.clearBtn":"Clear text","motion.add":"Add update",
-  "work.kicker":"SELECTED DEMOS","work.title":"Three briefs. Three different systems.","work.copy":"The point is not one visual style. It is showing that I can build a system around the problem in front of me.","case1.title":"Editorial campaign","case1.copy":"A conversion-focused campaign page built around large type, pacing and cinematic movement.","case2.title":"Product commerce","case2.copy":"A responsive product experience focused on browsing, hierarchy and satisfying shopping interactions.","case3.title":"SaaS dashboard","case3.copy":"Dense product UI with reusable components, application states and motion that clarifies data changes.","case.open":"Open live demo",
-  "cred.label":"PRODUCTS & SYSTEMS I’VE BUILT ACROSS","cred.persona":"Conversational product","cred.ads":"Advertising platform","cred.worlds":"Storytelling system",
-  "github.kicker":"OPEN SOURCE / CODE","github.title":"You can inspect the implementation.","github.copy":"This portfolio and my public experiments live on GitHub. Open the source, inspect the structure and judge the implementation instead of trusting screenshots.","github.open":"Open GitHub",
-  "pricing.kicker":"FREELANCE / LAUNCH PRICING","pricing.title":"Small overhead. Serious execution.","pricing.copy":"These are introductory starting points while I build a larger client portfolio. Scope changes the final quote; the standard of execution does not.","market.title":"2026 market context","market.copy":"Reference ranges are shown for context, not as promises of equivalent scope.","market.mine":"My landing page","market.upwork":"Upwork landing design","market.clutch":"Web design companies","pricing.landing":"LANDING PAGE","pricing.landingCopy":"One focused responsive page with custom motion, deployment and a performance pass.","pricing.site":"BUSINESS SITE","pricing.siteCopy":"A polished multi-page presence with responsive design, motion, basic SEO and analytics setup.","pricing.custom":"CUSTOM FRONT-END","pricing.customCopy":"React/product UI, complex responsive states, custom interactions or an existing design that needs serious implementation.","pricing.start":"Start a project","pricing.note":"Launch pricing — quotes increase with complexity, integrations and content scope.",
-  "contact.kicker":"LET’S BUILD SOMETHING","contact.a":"Have a role,","contact.b":"project or ambitious idea?","contact.copy":"I’m open to remote front-end opportunities, freelance websites, product design and motion-focused interface work.","contact.email":"Email me"
- },
- pt:{
-  "nav.work":"Projetos","nav.motion":"Motion","nav.pricing":"Preços","nav.github":"GitHub","nav.contact":"Contato",
-  "hero.kicker":"FRONT-END CRIATIVO • PRODUCT DESIGN • MOTION","hero.hello":"Olá,","hero.iam":"eu sou o Davi.","hero.sub":"Eu desenho e construo sites e interfaces de produto em que sistema visual, movimento e engenharia front-end trabalham juntos.","hero.meta1":"Remoto para o mundo","hero.meta2":"Inglês / Português","hero.scroll":"Role para me conhecer",
-  "about.kicker":"SOBRE / PERFIL","about.titleA":"Eu construo produtos digitais que","about.titleB":"parecem intencionais.","about.copy":"Eu trabalho entre desenvolvimento front-end, product design, sistemas de motion, QA responsivo e direção visual. Uso IA para acelerar iteração e resolução de problemas — não para substituir bom gosto e direção humana.","about.available":"Disponível para trabalho remoto","cap.front":"Engenharia front-end","cap.frontCopy":"Interfaces responsivas, componentes reutilizáveis, performance e QA de navegador.","cap.product":"Product design","cap.productCopy":"Hierarquia, fluxos, sistemas e decisões de interação que sobrevivem à implementação.","cap.motion":"Sistemas de motion","cap.motionCopy":"Coreografia de scroll, microinterações, transições e feedback com propósito.","cap.ai":"Fluxos com IA","cap.aiCopy":"Prototipagem, debugging e iteração mais rápidos mantendo direção humana no controle.",
-  "motion.title":"Motion deve explicar a interface.","motion.copy":"Não é decoração. Não é reel. Cada cena abaixo está rodando de verdade no navegador e pode ser usada.","motion.resize":"Geometria responsiva","motion.resizeCopy":"Um componente muda de forma sem perder hierarquia ou ritmo.","motion.tabs":"Estado que se move","motion.tabsCopy":"A seleção viaja pela interface em vez de piscar entre estados desconectados.","motion.avatar":"Hover consciente dos vizinhos","motion.avatarCopy":"Os itens próximos reagem com intensidade gradual, então o grupo se comporta como um sistema físico.","motion.clear":"Feedback com dissolve","motion.clearCopy":"Até remover texto pode comunicar o que mudou e para onde o estado foi.","motion.stack":"Contexto em profundidade","motion.stackCopy":"Updates se empilham com hierarquia e expandem sem virar ruído visual.","motion.morph":"Morph de superfície","motion.morphCopy":"Um controle pequeno cresce e vira uma superfície útil sem parecer uma interrupção modal.","motion.toggle":"Mudar tamanho","motion.clearBtn":"Limpar texto","motion.add":"Adicionar update",
-  "work.kicker":"DEMOS SELECIONADAS","work.title":"Três briefings. Três sistemas diferentes.","work.copy":"A ideia não é ter um único estilo visual. É mostrar que eu consigo construir um sistema em torno do problema que está na minha frente.","case1.title":"Campanha editorial","case1.copy":"Uma página de campanha focada em conversão, com tipografia grande, ritmo e movimento cinematográfico.","case2.title":"Product commerce","case2.copy":"Uma experiência de produto responsiva focada em navegação, hierarquia e interações de compra satisfatórias.","case3.title":"Dashboard SaaS","case3.copy":"UI de produto densa com componentes reutilizáveis, estados de aplicação e motion que esclarece mudanças nos dados.","case.open":"Abrir demo ao vivo",
-  "cred.label":"PRODUTOS & SISTEMAS EM QUE JÁ TRABALHEI","cred.persona":"Produto conversacional","cred.ads":"Plataforma de anúncios","cred.worlds":"Sistema de storytelling",
-  "github.kicker":"OPEN SOURCE / CÓDIGO","github.title":"Você pode inspecionar a implementação.","github.copy":"Este portfólio e meus experimentos públicos vivem no GitHub. Abra o código, veja a estrutura e julgue a implementação em vez de confiar em screenshots.","github.open":"Abrir GitHub",
-  "pricing.kicker":"FREELANCE / PREÇOS DE LANÇAMENTO","pricing.title":"Pouco overhead. Execução séria.","pricing.copy":"Esses são valores iniciais enquanto amplio meu portfólio de clientes. O escopo muda o orçamento final; o padrão de execução não.","market.title":"Contexto de mercado em 2026","market.copy":"As faixas são apenas referências de contexto, não promessas de escopo equivalente.","market.mine":"Minha landing page","market.upwork":"Landing design no Upwork","market.clutch":"Empresas de web design","pricing.landing":"LANDING PAGE","pricing.landingCopy":"Uma página responsiva focada, com motion customizado, deploy e revisão de performance.","pricing.site":"SITE EMPRESARIAL","pricing.siteCopy":"Presença multi-página polida com design responsivo, motion, SEO básico e configuração de analytics.","pricing.custom":"FRONT-END SOB MEDIDA","pricing.customCopy":"React/UI de produto, estados responsivos complexos, interações customizadas ou um design existente que precisa de uma implementação séria.","pricing.start":"Começar um projeto","pricing.note":"Preço de lançamento — o orçamento cresce com complexidade, integrações e escopo de conteúdo.",
-  "contact.kicker":"VAMOS CONSTRUIR ALGO","contact.a":"Tem uma vaga,","contact.b":"projeto ou ideia ambiciosa?","contact.copy":"Estou disponível para oportunidades remotas de front-end, sites freelance, product design e trabalho de interface com foco em motion.","contact.email":"Me mande um email"
- }
-};
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const finePointer = window.matchMedia('(pointer: fine)').matches;
+const qs = (s, r = document) => r.querySelector(s);
+const qsa = (s, r = document) => [...r.querySelectorAll(s)];
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 
-const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
-const finePointer=matchMedia('(pointer:fine)').matches;
-let language=localStorage.getItem('dm-lang')||'en';
-const qs=(s,r=document)=>r.querySelector(s),qsa=(s,r=document)=>[...r.querySelectorAll(s)];
-const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
-const lerp=(a,b,t)=>a+(b-a)*t;
-const smooth=t=>t*t*(3-2*t);
-
-function applyLanguage(lang){
- language=lang;document.documentElement.lang=lang==='pt'?'pt-BR':'en';
- qsa('[data-i18n]').forEach(el=>{const v=translations[lang]?.[el.dataset.i18n];if(v!=null)el.textContent=v});
- const btn=qs('#langToggle');if(btn){btn.textContent=lang==='en'?'PT':'EN';btn.setAttribute('aria-label',lang==='en'?'Mudar para português':'Switch to English')}
- localStorage.setItem('dm-lang',lang);
-}
-function initIcons(){if(window.lucide)window.lucide.createIcons()}
-
-function initCanvas(){
- const canvas=qs('#ambientCanvas');if(!canvas)return;const ctx=canvas.getContext('2d');let w=0,h=0,dpr=1,pts=[];const pointer={x:-9999,y:-9999};
- const resize=()=>{dpr=Math.min(devicePixelRatio||1,1.5);w=innerWidth;h=innerHeight;canvas.width=w*dpr;canvas.height=h*dpr;canvas.style.width=w+'px';canvas.style.height=h+'px';ctx.setTransform(dpr,0,0,dpr,0,0);const count=Math.round(clamp((w*h)/12000,65,145));pts=Array.from({length:count},(_,i)=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.09,vy:(Math.random()-.5)*.09,r:Math.random()*1.4+.3,a:Math.random()*.5+.15,c:i%17===0?'orange':i%7===0?'blue':'white'}))};
- addEventListener('resize',resize,{passive:true});addEventListener('pointermove',e=>{pointer.x=e.clientX;pointer.y=e.clientY},{passive:true});resize();
- const colors={white:[205,222,242],blue:[78,167,255],orange:[255,140,89]};
- const draw=()=>{ctx.clearRect(0,0,w,h);for(const p of pts){if(!reduceMotion){p.x+=p.vx;p.y+=p.vy;if(p.x<-20)p.x=w+20;if(p.x>w+20)p.x=-20;if(p.y<-20)p.y=h+20;if(p.y>h+20)p.y=-20;const dx=p.x-pointer.x,dy=p.y-pointer.y,d=Math.hypot(dx,dy);if(d<150&&d>1){const f=(150-d)/150;p.x+=dx/d*f*.18;p.y+=dy/d*f*.18}}const c=colors[p.c];ctx.beginPath();ctx.fillStyle=`rgba(${c[0]},${c[1]},${c[2]},${p.a})`;ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill()}requestAnimationFrame(draw)};draw();
+function initIcons() {
+  if (window.lucide) window.lucide.createIcons();
 }
 
-function initCursor(){
- const el=qs('.cursor-o');if(!el||!finePointer)return;document.body.classList.add('cursor-ready');let tx=innerWidth/2,ty=innerHeight/2,x=tx,y=ty;
- addEventListener('pointermove',e=>{tx=e.clientX;ty=e.clientY},{passive:true});const tick=()=>{x+=(tx-x)*.24;y+=(ty-y)*.24;el.style.left=x+'px';el.style.top=y+'px';requestAnimationFrame(tick)};tick();
- qsa('a,button,.capability,.case-card,.price-card,.brand-chip').forEach(node=>{node.addEventListener('pointerenter',()=>el.classList.add('is-big'));node.addEventListener('pointerleave',()=>el.classList.remove('is-big'))});
- addEventListener('pointerdown',()=>el.classList.add('is-down'));addEventListener('pointerup',()=>el.classList.remove('is-down'));
+function initLanguage() {
+  const button = qs('#languageToggle');
+  if (!button) return;
+  let lang = localStorage.getItem('dm-lang') || 'en';
+  const apply = () => {
+    document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+    qsa('[data-en][data-pt]').forEach(el => {
+      el.textContent = el.dataset[lang];
+    });
+    button.textContent = lang === 'en' ? 'PT' : 'EN';
+    button.setAttribute('aria-label', lang === 'en' ? 'Mudar para português' : 'Switch to English');
+    localStorage.setItem('dm-lang', lang);
+  };
+  button.addEventListener('click', () => {
+    lang = lang === 'en' ? 'pt' : 'en';
+    apply();
+  });
+  apply();
 }
 
-function initHeader(){
- const header=qs('.site-header'),bar=qs('.page-progress i');let last=scrollY;
- const update=()=>{const y=scrollY,max=document.documentElement.scrollHeight-innerHeight,p=max>0?y/max:0;if(bar)bar.style.transform=`scaleX(${p})`;if(header){header.classList.toggle('is-scrolled',y>20);if(y>420&&y>last+9)header.classList.add('is-hidden');if(y<last-5||y<140)header.classList.remove('is-hidden')}last=y};addEventListener('scroll',update,{passive:true});addEventListener('resize',update,{passive:true});update();
+function initHeaderAndProgress() {
+  const header = qs('.site-header');
+  const progress = qs('.page-progress span');
+  let previous = window.scrollY;
+  const update = () => {
+    const y = window.scrollY;
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const p = max > 0 ? y / max : 0;
+    if (progress) progress.style.transform = `scaleX(${p})`;
+    if (header) {
+      header.classList.toggle('is-scrolled', y > 18);
+      if (y > 520 && y > previous + 8) header.classList.add('is-hidden');
+      if (y < previous - 5 || y < 120) header.classList.remove('is-hidden');
+    }
+    previous = y;
+  };
+  addEventListener('scroll', update, { passive: true });
+  addEventListener('resize', update, { passive: true });
+  update();
 }
 
-function initIntro(){
- if(reduceMotion||!window.gsap||!window.ScrollTrigger)return;gsap.registerPlugin(ScrollTrigger);
- const section=qs('.intro-story'),square=qs('.identity-square'),mini=qs('.identity-mini'),content=qs('.identity-content'),hero=qs('.hero-copy'),tape=qs('.skill-tape'),floating=qs('.floating-mark');if(!section||!square)return;
- const render=p=>{
-  const open=smooth(clamp((p-.13)/.38,0,1));const close=smooth(clamp((p-.72)/.24,0,1));
-  const mobile=innerWidth<920;
-  const start={x:mobile?78:72,y:mobile?66:52,w:mobile?96:118,h:mobile?96:118,r:mobile?25:30};
-  const middle={x:50,y:50,w:mobile?92:86,h:mobile?79:76,r:mobile?30:42};
-  const end={x:mobile?86:89,y:mobile?11:13,w:mobile?54:64,h:mobile?54:64,r:mobile?17:20};
-  let x=lerp(start.x,middle.x,open),y=lerp(start.y,middle.y,open),w=lerp(start.w,middle.w*innerWidth/100,open),h=lerp(start.h,middle.h*innerHeight/100,open),r=lerp(start.r,middle.r,open);
-  if(close>0){x=lerp(middle.x,end.x,close);y=lerp(middle.y,end.y,close);w=lerp(middle.w*innerWidth/100,end.w,close);h=lerp(middle.h*innerHeight/100,end.h,close);r=lerp(middle.r,end.r,close)}
-  square.style.left=x+'%';square.style.top=y+'%';square.style.width=w+'px';square.style.height=h+'px';square.style.borderRadius=r+'px';
-  const heroOut=smooth(clamp((p-.06)/.22,0,1));gsap.set(hero,{y:-heroOut*48,opacity:1-heroOut,scale:1-heroOut*.035,filter:`blur(${heroOut*5}px)`});gsap.set(tape,{opacity:1-heroOut*.8,y:heroOut*18});
-  const contentIn=smooth(clamp((p-.31)/.13,0,1));const contentOut=smooth(clamp((p-.69)/.1,0,1));gsap.set(content,{opacity:contentIn*(1-contentOut),y:(1-contentIn)*36-contentOut*22,pointerEvents:contentIn>.8&&contentOut<.2?'auto':'none'});gsap.set(mini,{opacity:(1-open)+close,scale:lerp(1,.7,open)*(1+close*.18)});
-  if(floating)gsap.set(floating,{opacity:clamp((p-.91)/.06,0,1),y:lerp(-12,0,clamp((p-.91)/.06,0,1)),scale:lerp(.86,1,clamp((p-.91)/.06,0,1))});
-  document.documentElement.style.setProperty('--intro-index',`${p*330}%`);
-  qsa('.capability').forEach((c,i)=>{const cp=smooth(clamp((p-(.39+i*.025))/.12,0,1));gsap.set(c,{y:(1-cp)*22,opacity:cp,scale:.97+cp*.03})});
- };
- ScrollTrigger.create({trigger:section,start:'top top',end:'bottom bottom',scrub:true,onUpdate:self=>render(self.progress),onLeave:()=>floating&&gsap.to(floating,{opacity:1,y:0,scale:1,duration:.3}),onEnterBack:()=>floating&&gsap.set(floating,{opacity:0})});render(0);
- gsap.from('.hero-copy>*',{y:32,opacity:0,stagger:.08,duration:.8,ease:'power4.out',delay:.1});
+function initCursor() {
+  const cursor = qs('.cursor-orbit');
+  if (!cursor || !finePointer || reduceMotion) return;
+  document.body.classList.add('cursor-ready');
+  let tx = innerWidth / 2, ty = innerHeight / 2, x = tx, y = ty;
+  addEventListener('pointermove', e => { tx = e.clientX; ty = e.clientY; }, { passive: true });
+  const loop = () => {
+    x += (tx - x) * .24;
+    y += (ty - y) * .24;
+    cursor.style.transform = `translate(${x - 13}px, ${y - 13}px)`;
+    requestAnimationFrame(loop);
+  };
+  loop();
+  qsa('a,button,.case-chapter,.product-list article,.service-list article').forEach(el => {
+    el.addEventListener('pointerenter', () => cursor.classList.add('is-active'));
+    el.addEventListener('pointerleave', () => cursor.classList.remove('is-active'));
+  });
 }
 
-let motionIndex=-1;
-function activateMotionScene(index){
- const scenes=qsa('.motion-scene');if(!scenes.length||index===motionIndex)return;const old=scenes[motionIndex],next=scenes[index];if(old&&window.gsap){gsap.to(old,{opacity:0,y:-55,scale:.95,rotateX:-4,filter:'blur(8px)',duration:.5,ease:'power3.in',onComplete:()=>old.classList.remove('is-active')})}else if(old)old.classList.remove('is-active');
- if(next){next.classList.add('is-active');if(window.gsap)gsap.fromTo(next,{opacity:0,y:65,scale:.94,rotateX:5,filter:'blur(10px)'},{opacity:1,y:0,scale:1,rotateX:0,filter:'blur(0px)',duration:.75,ease:'power4.out'})}
- motionIndex=index;qs('#motionCurrent').textContent=String(index+1).padStart(2,'0');qsa('.motion-dot').forEach((d,i)=>{const fill=qs('i',d);if(fill)fill.style.transform=`scaleX(${i<index?1:i===index?.12:0})`});
+function initCanvas() {
+  const canvas = qs('#ambient');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let w = 0, h = 0, dpr = 1, points = [];
+  const pointer = { x: -9999, y: -9999 };
+  const resize = () => {
+    dpr = Math.min(devicePixelRatio || 1, 1.4);
+    w = innerWidth; h = innerHeight;
+    canvas.width = Math.round(w * dpr);
+    canvas.height = Math.round(h * dpr);
+    canvas.style.width = `${w}px`;
+    canvas.style.height = `${h}px`;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const count = Math.round(clamp((w * h) / 18000, 38, 92));
+    points = Array.from({ length: count }, (_, i) => ({
+      x: Math.random() * w,
+      y: Math.random() * h,
+      vx: (Math.random() - .5) * .06,
+      vy: (Math.random() - .5) * .06,
+      r: .35 + Math.random() * 1.05,
+      alpha: .12 + Math.random() * .34,
+      blue: i % 11 === 0
+    }));
+  };
+  addEventListener('resize', resize, { passive: true });
+  if (finePointer) addEventListener('pointermove', e => { pointer.x = e.clientX; pointer.y = e.clientY; }, { passive: true });
+  resize();
+  const draw = () => {
+    ctx.clearRect(0, 0, w, h);
+    for (const p of points) {
+      if (!reduceMotion) {
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < -10) p.x = w + 10;
+        if (p.x > w + 10) p.x = -10;
+        if (p.y < -10) p.y = h + 10;
+        if (p.y > h + 10) p.y = -10;
+        const dx = p.x - pointer.x, dy = p.y - pointer.y, dist = Math.hypot(dx, dy);
+        if (dist < 120 && dist > 1) {
+          const force = (120 - dist) / 120;
+          p.x += (dx / dist) * force * .12;
+          p.y += (dy / dist) * force * .12;
+        }
+      }
+      ctx.beginPath();
+      ctx.fillStyle = p.blue ? `rgba(72,151,255,${p.alpha})` : `rgba(220,229,242,${p.alpha})`;
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    requestAnimationFrame(draw);
+  };
+  draw();
 }
-function initMotionStory(){
- const section=qs('.motion-story');if(!section)return;activateMotionScene(0);
- if(reduceMotion||!window.ScrollTrigger)return;ScrollTrigger.create({trigger:section,start:'top top',end:'bottom bottom',scrub:true,onUpdate:self=>{const count=qsa('.motion-scene').length,pos=self.progress*count,index=Math.min(count-1,Math.floor(pos));activateMotionScene(index);qsa('.motion-dot').forEach((d,i)=>{const fill=qs('i',d);if(!fill)return;const v=i<index?1:i===index?pos-index:0;fill.style.transform=`scaleX(${clamp(v,0,1)})`})}});
+
+function initSkillRibbon() {
+  const track = qs('#skillTrack');
+  if (!track || reduceMotion) return;
+  let x = 0;
+  let speed = -.35;
+  let target = -.35;
+  let previousY = scrollY;
+  let half = 0;
+  const measure = () => { half = track.scrollWidth / 2; };
+  measure();
+  addEventListener('resize', measure, { passive: true });
+  addEventListener('scroll', () => {
+    const dy = scrollY - previousY;
+    previousY = scrollY;
+    target = clamp(-.35 - dy * .12, -8, 7);
+  }, { passive: true });
+  const tick = () => {
+    speed += (target - speed) * .08;
+    target += (-.35 - target) * .025;
+    x += speed;
+    if (half) {
+      while (x <= -half) x += half;
+      while (x > 0) x -= half;
+    }
+    track.style.transform = `translate3d(${x}px,0,0)`;
+    requestAnimationFrame(tick);
+  };
+  tick();
 }
 
-function setupTabs(root=document){
- root.querySelectorAll('[data-tabs]').forEach(group=>{const pill=qs('.t-tabs-pill',group),tabs=qsa('.t-tab',group);const move=(tab,animate=true)=>{if(!pill||!tab)return;if(!animate)pill.style.transition='none';pill.style.transform=`translateX(${tab.offsetLeft}px)`;pill.style.width=tab.offsetWidth+'px';if(!animate){void pill.offsetWidth;pill.style.transition=''}};const activate=tab=>{tabs.forEach(t=>t.setAttribute('aria-selected',String(t===tab)));move(tab,true);const out=qs('.tab-output strong',group.parentElement);if(out)out.textContent=tab.textContent};tabs.forEach(t=>t.addEventListener('click',()=>activate(t)));requestAnimationFrame(()=>move(tabs.find(t=>t.getAttribute('aria-selected')==='true')||tabs[0],false));addEventListener('resize',()=>move(tabs.find(t=>t.getAttribute('aria-selected')==='true')||tabs[0],false),{passive:true})});
+function initIntroStory() {
+  if (reduceMotion || !window.gsap || !window.ScrollTrigger) return;
+  gsap.registerPlugin(ScrollTrigger);
+  const section = qs('.intro-story');
+  const surface = qs('#identitySurface');
+  const content = qs('#surfaceContent');
+  const mark = qs('.surface-mark');
+  const hero = qs('.hero-copy');
+  const ribbon = qs('.skill-ribbon');
+  const cue = qs('.scroll-cue');
+  if (!section || !surface || !content) return;
+
+  const persistent = document.createElement('a');
+  persistent.href = '#top';
+  persistent.className = 'persistent-dm';
+  persistent.textContent = 'DM';
+  persistent.setAttribute('aria-label', 'Back to top');
+  Object.assign(persistent.style, {
+    position: 'fixed', right: '22px', top: '84px', width: '58px', height: '58px',
+    border: '1px solid rgba(255,255,255,.1)', borderRadius: '18px',
+    background: 'rgba(10,12,17,.76)', backdropFilter: 'blur(16px)', zIndex: '70',
+    display: 'grid', placeItems: 'center', fontFamily: 'PersonaFont,Inter,sans-serif',
+    fontSize: '12px', opacity: '0', transform: 'translateY(-8px) scale(.94)',
+    transition: 'opacity .35s, transform .45s cubic-bezier(.22,1,.36,1)', pointerEvents: 'none'
+  });
+  document.body.appendChild(persistent);
+
+  const mm = gsap.matchMedia();
+  mm.add('(min-width: 761px)', () => {
+    const tl = gsap.timeline({
+      scrollTrigger: { trigger: section, start: 'top top', end: 'bottom bottom', scrub: .75 }
+    });
+    tl.to(hero, { y: -90, opacity: 0, ease: 'none', duration: .18 }, .06)
+      .to(ribbon, { y: 34, opacity: 0, ease: 'none', duration: .14 }, .12)
+      .to(cue, { opacity: 0, ease: 'none', duration: .08 }, .08)
+      .to(surface, { left: '50%', top: '50%', width: '86vw', height: '76vh', borderRadius: 42, ease: 'power3.inOut', duration: .34 }, .12)
+      .to(mark, { opacity: 0, scale: .8, ease: 'none', duration: .08 }, .24)
+      .to(content, { opacity: 1, ease: 'power2.out', duration: .16 }, .32)
+      .to({}, { duration: .23 })
+      .to(content, { opacity: 0, ease: 'power2.in', duration: .1 }, .72)
+      .to(surface, { left: 'calc(100% - 58px)', top: 113, width: 58, height: 58, borderRadius: 18, ease: 'power3.inOut', duration: .18 }, .77)
+      .to(mark, { opacity: 1, scale: 1, fontSize: 11, ease: 'power2.out', duration: .08 }, .88);
+  });
+  mm.add('(max-width: 760px)', () => {
+    const tl = gsap.timeline({
+      scrollTrigger: { trigger: section, start: 'top top', end: 'bottom bottom', scrub: .65 }
+    });
+    tl.to(hero, { y: -60, opacity: 0, ease: 'none', duration: .18 }, .06)
+      .to(ribbon, { y: 24, opacity: 0, ease: 'none', duration: .14 }, .12)
+      .to(surface, { left: '50%', top: '52%', width: '92vw', height: '79vh', borderRadius: 30, ease: 'power3.inOut', duration: .34 }, .12)
+      .to(mark, { opacity: 0, duration: .06 }, .25)
+      .to(content, { opacity: 1, duration: .16 }, .32)
+      .to({}, { duration: .22 })
+      .to(content, { opacity: 0, duration: .1 }, .72)
+      .to(surface, { left: 'calc(100% - 46px)', top: 86, width: 54, height: 54, borderRadius: 17, ease: 'power3.inOut', duration: .18 }, .77)
+      .to(mark, { opacity: 1, fontSize: 10, duration: .08 }, .88);
+  });
+
+  ScrollTrigger.create({
+    trigger: section,
+    start: '72% top',
+    end: 'bottom top',
+    onToggle: self => {
+      persistent.style.opacity = self.isActive ? '1' : '0';
+      persistent.style.transform = self.isActive ? 'translateY(0) scale(1)' : 'translateY(-8px) scale(.94)';
+      persistent.style.pointerEvents = self.isActive ? 'auto' : 'none';
+    }
+  });
+  ScrollTrigger.create({
+    trigger: '#contact',
+    start: 'top 70%',
+    onEnter: () => { persistent.style.opacity = '0'; persistent.style.pointerEvents = 'none'; },
+    onLeaveBack: () => { persistent.style.opacity = '1'; persistent.style.pointerEvents = 'auto'; }
+  });
 }
-function initResizeDemo(){const card=qs('#resizeCard'),btn=qs('#resizeToggle');if(!card||!btn)return;btn.addEventListener('click',()=>card.classList.toggle('is-small'))}
-function initAvatarGroup(){const root=qs('#avatarGroup');if(!root)return;const items=qsa('.t-avatar',root),falloff=.45,lift=-13,scale=1.09;items.forEach((item,idx)=>item.addEventListener('pointerenter',()=>items.forEach((el,i)=>{el.style.setProperty('--shift',(lift*Math.pow(falloff,Math.abs(i-idx))).toFixed(2)+'px');el.style.setProperty('--scale-active',i===idx?scale:1);el.style.filter=i===idx?'brightness(1.13)':'brightness(1)'})));root.addEventListener('pointerleave',()=>items.forEach(el=>{el.style.setProperty('--shift','0px');el.style.setProperty('--scale-active','1');el.style.filter=''}))}
-function initClear(){const wrap=qs('#clearWrap'),input=qs('#clearInput'),mirror=qs('.t-clear-mirror',wrap),placeholder=qs('.t-clear-placeholder',wrap),glow=qs('.t-clear-glow',wrap),btn=qs('#clearButton');if(!wrap||!input||!mirror||!btn)return;const sync=()=>{mirror.textContent=input.value;wrap.classList.toggle('has-value',!!input.value)};input.addEventListener('input',sync);sync();btn.addEventListener('click',()=>{if(!input.value){input.value='Motion should explain change';sync();return}wrap.classList.add('is-clearing');const words=input.value.trim().split(/\s+/);if(glow){glow.style.background=words.map((_,i)=>`radial-gradient(circle at ${16+(i/Math.max(1,words.length-1))*70}% 50%,rgba(93,177,255,.9),transparent 18%)`).join(',');glow.animate([{opacity:0},{opacity:.9,offset:.2},{opacity:0}],{duration:760,easing:'cubic-bezier(.22,1,.36,1)'})}mirror.animate([{transform:'translateY(0)',opacity:1,filter:'blur(0)'},{transform:'translateY(-14px)',opacity:0,filter:'blur(3px)'}],{duration:430,easing:'cubic-bezier(.22,1,.36,1)',fill:'forwards'});placeholder.animate([{transform:'translateY(14px)',opacity:0},{transform:'translateY(0)',opacity:1}],{duration:430,delay:90,easing:'cubic-bezier(.22,1,.36,1)',fill:'both'});setTimeout(()=>{input.value='';mirror.textContent='';wrap.classList.remove('has-value','is-clearing');input.focus()},480)})}
-function initStack(){const stack=qs('#toastStack'),btn=qs('#addToast');if(!stack||!btn)return;const data=[['UI','Motion tuned','Scroll scene timing refined.'],['FE','Responsive pass','Tablet and phone states checked.'],['QA','Interaction verified','Hover and focus states reviewed.'],['DX','Build shipped','Latest version is live.']];let n=0;const relabel=()=>qsa('.t-stack-banner',stack).forEach((el,i)=>el.dataset.depth=String(i));const add=()=>{qsa('.t-stack-banner',stack).forEach(el=>el.dataset.depth=String(+el.dataset.depth+1));const d=data[n++%data.length],el=document.createElement('div');el.className='t-stack-banner is-enter';el.dataset.depth='0';el.innerHTML=`<i>${d[0]}</i><div><strong>${d[1]}</strong><span>${d[2]}</span></div>`;stack.prepend(el);void el.offsetWidth;el.classList.remove('is-enter');const all=qsa('.t-stack-banner',stack);if(all.length>3)setTimeout(()=>all[all.length-1]?.remove(),360);relabel()};stack.addEventListener('pointerenter',()=>stack.classList.add('is-spread'));stack.addEventListener('pointerleave',()=>stack.classList.remove('is-spread'));btn.addEventListener('click',add);add();add();add()}
-function initMorph(){const root=qs('#morphMenu'),btn=qs('#morphButton');if(!root||!btn)return;btn.addEventListener('click',()=>{const open=root.dataset.open==='true';root.dataset.open=String(!open);btn.setAttribute('aria-expanded',String(!open))});qsa('a',root).forEach(a=>a.addEventListener('click',()=>{root.dataset.open='false';btn.setAttribute('aria-expanded','false')}))}
 
-function magnetic(el,strength=16){if(!finePointer||reduceMotion)return;el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect(),x=(e.clientX-r.left-r.width/2)/r.width,y=(e.clientY-r.top-r.height/2)/r.height;if(window.gsap)gsap.to(el,{x:x*strength,y:y*strength,duration:.28,ease:'power3.out'})});el.addEventListener('pointerleave',()=>window.gsap?gsap.to(el,{x:0,y:0,duration:.6,ease:'elastic.out(1,.5)'}):el.style.transform='')}
-function tilt(el,amount=4){if(!finePointer||reduceMotion||!window.gsap)return;el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;gsap.to(el,{rotateY:x*amount,rotateX:-y*amount,transformPerspective:1100,duration:.35,ease:'power3.out'})});el.addEventListener('pointerleave',()=>gsap.to(el,{rotateY:0,rotateX:0,duration:.65,ease:'power3.out'}))}
-
-function initCases(){
- if(reduceMotion||!window.gsap||!window.ScrollTrigger)return;qsa('.case-card').forEach((card,i)=>{const visual=qs('.case-visual',card);ScrollTrigger.create({trigger:card,start:'top 12%',end:'bottom top',scrub:true,onUpdate:self=>{const p=self.progress;gsap.set(card,{scale:1-p*.045,filter:`blur(${p*5}px)`,opacity:1-p*.28});if(visual)gsap.set(visual,{scale:1+p*.055})}})});gsap.to('.campaign-orb',{rotation:90,x:-35,y:-25,ease:'none',scrollTrigger:{trigger:card,start:'top bottom',end:'bottom top',scrub:1}})});
- qsa('.dash-chart b').forEach((bar,i)=>{gsap.from(bar,{scaleY:.05,duration:.85,delay:i*.05,ease:'power3.out',scrollTrigger:{trigger:bar.closest('.case-card'),start:'top 70%',once:true}})})
+function initManifesto() {
+  const lines = qsa('[data-manifesto]');
+  const section = qs('.manifesto');
+  if (!lines.length || !section) return;
+  if (reduceMotion || !window.ScrollTrigger) {
+    lines.forEach(l => l.classList.add('is-active'));
+    return;
+  }
+  ScrollTrigger.create({
+    trigger: section,
+    start: 'top 55%',
+    end: 'bottom 45%',
+    onUpdate: self => {
+      const idx = clamp(Math.floor(self.progress * lines.length), 0, lines.length - 1);
+      lines.forEach((line, i) => line.classList.toggle('is-active', i <= idx));
+    }
+  });
 }
-function initPricing(){if(reduceMotion||!window.gsap||!window.ScrollTrigger)return;qsa('.market-track i').forEach((bar,i)=>gsap.to(bar,{scaleX:1,duration:1,ease:'power3.out',delay:i*.08,scrollTrigger:{trigger:'.market-context',start:'top 80%',once:true}}));qsa('.price-card').forEach((card,i)=>gsap.from(card,{y:55,opacity:0,rotateX:5,duration:.75,delay:i*.08,ease:'power4.out',scrollTrigger:{trigger:'.pricing-grid',start:'top 84%',once:true}}))}
-function initReveal(){if(reduceMotion||!window.gsap||!window.ScrollTrigger)return;qsa('.section-head,.cred-panel,.github-panel,.contact-inner').forEach(el=>gsap.from(el,{y:48,opacity:0,duration:.85,ease:'power4.out',scrollTrigger:{trigger:el,start:'top 86%',once:true}}));gsap.to('.code-window',{y:-18,rotateY:0,ease:'none',scrollTrigger:{trigger:'.github-section',start:'top bottom',end:'bottom top',scrub:1.2}});gsap.to('.contact-orb',{scale:1.16,rotation:30,ease:'none',scrollTrigger:{trigger:'.contact-section',start:'top bottom',end:'bottom bottom',scrub:1.2}})}
 
-function initInteractive(){setupTabs();initResizeDemo();initAvatarGroup();initClear();initStack();initMorph();qsa('.magnetic').forEach(el=>magnetic(el));qsa('.price-card,.github-panel').forEach(el=>tilt(el,2.8))}
+function initMotionStory() {
+  const story = qs('.motion-story');
+  const scenes = qsa('.motion-scene');
+  const number = qs('#motionNumber');
+  const bar = qs('#motionBar');
+  if (!story || !scenes.length) return;
+  const setScene = idx => {
+    scenes.forEach((scene, i) => scene.classList.toggle('is-active', i === idx));
+    if (number) number.textContent = String(idx + 1).padStart(2, '0');
+    if (bar) bar.style.transform = `scaleX(${(idx + 1) / scenes.length})`;
+  };
+  setScene(0);
+  if (!reduceMotion && window.ScrollTrigger) {
+    ScrollTrigger.create({
+      trigger: story,
+      start: 'top top',
+      end: 'bottom bottom',
+      onUpdate: self => setScene(clamp(Math.floor(self.progress * scenes.length), 0, scenes.length - 1))
+    });
+  }
 
-function init(){applyLanguage(language);initIcons();initCanvas();initCursor();initHeader();if(window.gsap&&window.ScrollTrigger)gsap.registerPlugin(ScrollTrigger);initIntro();initMotionStory();initInteractive();initCases();initPricing();initReveal();qs('#langToggle')?.addEventListener('click',()=>applyLanguage(language==='en'?'pt':'en'));setTimeout(()=>window.ScrollTrigger?.refresh(),250)}
-document.addEventListener('DOMContentLoaded',init);
+  const resizeDemo = qs('#resizeDemo');
+  qs('#resizeToggle')?.addEventListener('click', () => resizeDemo?.classList.toggle('is-mobile'));
+
+  const tabs = qs('#travelTabs');
+  if (tabs) {
+    const pill = qs('.travel-pill', tabs);
+    const buttons = qsa('button', tabs);
+    buttons.forEach((button, index) => button.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('is-selected'));
+      button.classList.add('is-selected');
+      if (pill) pill.style.transform = `translateX(${index * 100}%)`;
+      const state = qs('#activeState');
+      if (state) state.textContent = button.textContent;
+    }));
+  }
+
+  const falloff = qs('#falloffGroup');
+  if (falloff && finePointer) {
+    const items = qsa('button', falloff);
+    items.forEach((item, index) => {
+      item.addEventListener('pointerenter', () => {
+        items.forEach((node, i) => {
+          const d = Math.abs(i - index);
+          const scale = d === 0 ? 1.22 : d === 1 ? 1.1 : d === 2 ? 1.035 : 1;
+          const y = d === 0 ? -12 : d === 1 ? -6 : d === 2 ? -2 : 0;
+          node.style.transform = `translateY(${y}px) scale(${scale})`;
+          node.style.opacity = d > 2 ? '.58' : '1';
+          node.style.background = d === 0 ? 'rgba(8,118,255,.18)' : 'rgba(255,255,255,.055)';
+        });
+      });
+    });
+    falloff.addEventListener('pointerleave', () => qsa('button', falloff).forEach(node => {
+      node.style.transform = '';
+      node.style.opacity = '';
+      node.style.background = '';
+    }));
+  }
+
+  const toastStack = qs('#toastStack');
+  let toastCount = 0;
+  const messages = [
+    ['Component published', 'Responsive pass completed'],
+    ['Motion refined', 'State transition updated'],
+    ['QA complete', 'No blocking issues found'],
+    ['Build ready', 'Latest changes are available']
+  ];
+  const renderToasts = () => {
+    const nodes = qsa('.toast', toastStack);
+    nodes.forEach((node, i) => {
+      const depth = nodes.length - 1 - i;
+      node.style.transform = `translateY(${depth * -16}px) scale(${1 - depth * .035})`;
+      node.style.opacity = String(Math.max(.22, 1 - depth * .2));
+      node.style.zIndex = String(i + 1);
+    });
+  };
+  const addToast = () => {
+    if (!toastStack) return;
+    toastCount++;
+    const [title, sub] = messages[(toastCount - 1) % messages.length];
+    const node = document.createElement('div');
+    node.className = 'toast';
+    node.innerHTML = `<i></i><div><strong>${title}</strong><span>${sub}</span></div>`;
+    toastStack.appendChild(node);
+    while (toastStack.children.length > 4) toastStack.removeChild(toastStack.firstElementChild);
+    renderToasts();
+  };
+  addToast(); addToast(); addToast();
+  qs('#addToast')?.addEventListener('click', addToast);
+
+  const morph = qs('#morphControl');
+  const morphToggle = qs('#morphToggle');
+  morphToggle?.addEventListener('click', () => {
+    const open = !morph?.classList.contains('is-open');
+    morph?.classList.toggle('is-open', open);
+    morphToggle.setAttribute('aria-expanded', String(open));
+  });
+}
+
+function initSectionMotion() {
+  if (reduceMotion || !window.gsap || !window.ScrollTrigger) return;
+  gsap.registerPlugin(ScrollTrigger);
+  qsa('.case-chapter').forEach((chapter, index) => {
+    gsap.from(chapter, {
+      y: 46,
+      opacity: 0,
+      duration: .9,
+      ease: 'power3.out',
+      scrollTrigger: { trigger: chapter, start: 'top 82%', once: true }
+    });
+    const visual = qs('.case-visual', chapter);
+    if (visual) gsap.fromTo(visual, { scale: .96 }, {
+      scale: 1,
+      ease: 'none',
+      scrollTrigger: { trigger: chapter, start: 'top bottom', end: 'bottom top', scrub: true }
+    });
+  });
+  qsa('.market-row > i > b').forEach(bar => {
+    const amount = parseFloat(getComputedStyle(bar).getPropertyValue('--bar')) || .2;
+    gsap.to(bar, {
+      scaleX: amount,
+      duration: 1.1,
+      ease: 'power3.out',
+      scrollTrigger: { trigger: bar, start: 'top 88%', once: true }
+    });
+  });
+  qsa('.service-list article,.product-list article,.why-list span').forEach(el => {
+    gsap.from(el, {
+      y: 22,
+      opacity: 0,
+      duration: .65,
+      ease: 'power3.out',
+      scrollTrigger: { trigger: el, start: 'top 91%', once: true }
+    });
+  });
+}
+
+function initSmoothAnchors() {
+  qsa('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+      const id = link.getAttribute('href');
+      if (!id || id === '#') return;
+      const target = qs(id);
+      if (!target) return;
+      e.preventDefault();
+      target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+    });
+  });
+}
+
+addEventListener('DOMContentLoaded', () => {
+  initLanguage();
+  initIcons();
+  initHeaderAndProgress();
+  initCursor();
+  initCanvas();
+  initSkillRibbon();
+  initIntroStory();
+  initManifesto();
+  initMotionStory();
+  initSectionMotion();
+  initSmoothAnchors();
+});
