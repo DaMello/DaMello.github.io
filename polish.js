@@ -18,10 +18,7 @@
       if(!animate) pill.style.transition = 'none';
       pill.style.transform = `translateX(${tab.offsetLeft}px)`;
       pill.style.width = `${tab.offsetWidth}px`;
-      if(!animate){
-        void pill.offsetWidth;
-        pill.style.transition = '';
-      }
+      if(!animate){ void pill.offsetWidth; pill.style.transition = ''; }
     };
 
     const select = tab => {
@@ -40,10 +37,7 @@
     const root = document.querySelector('#avatarGroup');
     if(!root || !finePointer) return;
     const items = [...root.querySelectorAll('.t-avatar')];
-    const lift = -4;
-    const scale = 1.05;
-    const falloff = .45;
-
+    const lift = -4, scale = 1.05, falloff = .45;
     items.forEach((item, activeIdx) => {
       item.addEventListener('mouseenter', () => {
         items.forEach((el, i) => {
@@ -55,7 +49,6 @@
         });
       });
     });
-
     root.addEventListener('mouseleave', () => {
       items.forEach(el => {
         el.style.transitionTimingFunction = 'var(--avatar-ease-out)';
@@ -69,11 +62,7 @@
     const group = document.querySelector('#metricDigits');
     const replay = document.querySelector('#replayDigits');
     if(!group) return;
-    const play = () => {
-      group.classList.remove('is-animating');
-      void group.offsetWidth;
-      group.classList.add('is-animating');
-    };
+    const play = () => { group.classList.remove('is-animating'); void group.offsetWidth; group.classList.add('is-animating'); };
     replay?.addEventListener('click', play);
     play();
   }
@@ -98,24 +87,13 @@
     const hitbox = document.querySelector('#stackDemo');
     const add = document.querySelector('#addPolishBanner');
     if(!root) return;
-
-    const messages = [
-      ['Build ready','Responsive pass completed'],
-      ['Motion refined','Interaction timing updated'],
-      ['QA complete','No blocking issues found'],
-      ['Deploy shipped','Latest version is live']
-    ];
+    const messages = [['Build ready','Responsive pass completed'],['Motion refined','Interaction timing updated'],['QA complete','No blocking issues found'],['Deploy shipped','Latest version is live']];
     let cursor = 0;
-
     const normalize = () => {
       const nodes = [...root.querySelectorAll('.t-stack-banner:not(.is-leaving)')];
       nodes.forEach((node, index) => node.dataset.depth = String(index));
-      nodes.slice(3).forEach(node => {
-        node.classList.add('is-leaving');
-        setTimeout(() => node.remove(), 270);
-      });
+      nodes.slice(3).forEach(node => { node.classList.add('is-leaving'); setTimeout(() => node.remove(), 270); });
     };
-
     const addBanner = (animate = true) => {
       const existing = [...root.querySelectorAll('.t-stack-banner:not(.is-leaving)')];
       existing.forEach(node => node.dataset.depth = String(Number(node.dataset.depth || 0) + 1));
@@ -125,13 +103,9 @@
       node.dataset.depth = '0';
       node.innerHTML = `<div><strong>${title}</strong><span>${sub}</span></div>`;
       root.prepend(node);
-      if(animate && !reduceMotion){
-        void node.offsetWidth;
-        node.classList.remove('is-enter');
-      }
+      if(animate && !reduceMotion){ void node.offsetWidth; node.classList.remove('is-enter'); }
       normalize();
     };
-
     addBanner(false); addBanner(false); addBanner(false);
     add?.addEventListener('click', () => addBanner(true));
     hitbox?.addEventListener('pointerenter', () => root.classList.add('is-spread'));
@@ -143,11 +117,21 @@
     const observer = new MutationObserver(removeDuplicatePersistentMark);
     observer.observe(document.body, {childList:true});
     setTimeout(() => observer.disconnect(), 2500);
-
     initMeasuredTabs();
     initAvatarFalloff();
     initDigitPop();
     initMorph();
     initBannerStack();
   });
+})();
+
+(() => {
+  const css = document.createElement('link');
+  css.rel = 'stylesheet';
+  css.href = './v3.css?v=20260930-space3';
+  document.head.appendChild(css);
+  const script = document.createElement('script');
+  script.src = './v3.js?v=20260930-space3';
+  script.defer = true;
+  document.head.appendChild(script);
 })();
