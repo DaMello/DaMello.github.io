@@ -1,0 +1,80 @@
+/* About v5 — Davi [moon] Mello -> rising About card */
+.about-v5-active .surface-mark,
+.about-v5-active .about-stage-label{display:none!important}
+
+.about-v5-active .name-orbit-lockup{
+  position:absolute!important;
+  left:50%!important;
+  top:50%!important;
+  width:min(980px,82vw)!important;
+  display:grid!important;
+  grid-template-columns:1fr auto 1fr!important;
+  align-items:center!important;
+  gap:clamp(34px,5vw,86px)!important;
+  transform:translate(-50%,-50%);
+  z-index:6!important;
+  pointer-events:none!important;
+}
+.about-v5-active .name-orbit-lockup span{
+  color:#f7f8fb!important;
+  font-size:clamp(66px,8vw,132px)!important;
+  line-height:.86!important;
+  letter-spacing:-.065em!important;
+  font-weight:650!important;
+}
+.about-v5-active .name-orbit-lockup span:first-child{text-align:right!important}
+.about-v5-active .name-orbit-lockup span:last-child{text-align:left!important}
+.about-v5-active .name-orbit-lockup i{
+  position:relative!important;
+  display:block!important;
+  width:clamp(96px,10vw,154px)!important;
+  aspect-ratio:1!important;
+  border-radius:50%!important;
+  background:
+    radial-gradient(circle at 34% 31%,rgba(255,255,255,.72) 0 5%,transparent 6%),
+    radial-gradient(circle at 62% 58%,rgba(84,90,102,.16) 0 10%,transparent 11%),
+    radial-gradient(circle at 42% 72%,rgba(79,85,96,.12) 0 6%,transparent 7%),
+    radial-gradient(circle at 36% 28%,#f0f1f4 0,#d5d8de 44%,#b4bac4 72%,#8e97a5 100%)!important;
+  box-shadow:
+    inset -18px -14px 34px rgba(24,29,39,.25),
+    0 0 42px rgba(220,231,255,.16)!important;
+}
+
+.about-v5-active #identitySurface{
+  position:absolute!important;
+  margin:0!important;
+  background:rgba(7,10,16,.78)!important;
+  border:1px solid rgba(255,255,255,.105)!important;
+  border-radius:30px!important;
+  overflow:hidden!important;
+  backdrop-filter:blur(26px) saturate(132%)!important;
+  box-shadow:0 34px 100px rgba(0,0,0,.46),inset 0 1px 0 rgba(255,255,255,.055)!important;
+  will-change:left,top,width,height,transform,opacity!important;
+}
+.about-v5-active #surfaceContent{
+  width:100%!important;
+  height:100%!important;
+  transform-origin:center bottom!important;
+  will-change:transform,opacity,filter!important;
+}
+.about-v5-active #identitySurface .surface-copy,
+.about-v5-active #identitySurface .capability-grid{min-height:0!important}
+
+@media (max-width:760px){
+  .about-v5-active .name-orbit-lockup{
+    width:92vw!important;
+    gap:18px!important;
+    grid-template-columns:1fr auto 1fr!important;
+  }
+  .about-v5-active .name-orbit-lockup span{font-size:clamp(43px,13vw,74px)!important}
+  .about-v5-active .name-orbit-lockup i{width:clamp(66px,18vw,96px)!important}
+  .about-v5-active #surfaceContent{
+    grid-template-columns:1fr!important;
+    overflow:auto!important;
+  }
+  .about-v5-active #identitySurface .surface-copy{border-right:0!important;border-bottom:1px solid rgba(255,255,255,.095)!important}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .about-v5-active .name-orbit-lockup{display:none!important}
+}
