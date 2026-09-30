@@ -2,193 +2,230 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#05070a" />
-  <meta name="description" content="Davi Mello — creative front-end developer, product designer and motion-focused web builder." />
-  <title>Davi Mello — Creative Front-end, Product & Motion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#050608" />
+  <meta name="description" content="Davi Mello — Frontend Engineer, Product Designer and Creative Developer." />
+  <title>Davi Mello — Frontend, Product & Motion</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=20260927-v7" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css?v=20260929-vnext" />
   <script src="https://unpkg.com/lucide@latest" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-  <script src="./script.js?v=20260927-v7" defer></script>
+  <script src="./script.js?v=20260929-vnext" defer></script>
 </head>
 <body>
-  <canvas id="ambientCanvas" aria-hidden="true"></canvas>
-  <div class="page-progress" aria-hidden="true"><i></i></div>
-  <div class="cursor-o" aria-hidden="true"><span>O</span></div>
-  <div class="floating-mark" aria-hidden="true">DM</div>
+  <canvas id="ambient" aria-hidden="true"></canvas>
+  <div class="page-progress" aria-hidden="true"><span></span></div>
+  <div class="cursor-orbit" aria-hidden="true"><i></i></div>
 
   <header class="site-header">
-    <a class="brand magnetic" href="#top" aria-label="Davi Mello home"><strong>DaMello</strong><i></i></a>
-    <nav class="nav-links" aria-label="Primary navigation">
-      <a href="#motion" data-i18n="nav.motion">Motion</a>
-      <a href="#work" data-i18n="nav.work">Work</a>
-      <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
-      <a href="#github" data-i18n="nav.github">GitHub</a>
+    <a class="brand" href="#top" aria-label="Davi Mello home"><span>DM</span><b>DaMello</b></a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#motion" data-en="Motion" data-pt="Motion">Motion</a>
+      <a href="#work" data-en="Work" data-pt="Projetos">Work</a>
+      <a href="#pricing" data-en="Pricing" data-pt="Preços">Pricing</a>
+      <a href="#contact" data-en="Contact" data-pt="Contato">Contact</a>
     </nav>
-    <div class="nav-actions">
-      <button class="lang-toggle" id="langToggle" type="button">PT</button>
-      <a class="contact-pill magnetic" href="#contact"><span data-i18n="nav.contact">Contact</span><i data-lucide="arrow-up-right"></i></a>
+    <div class="header-actions">
+      <button id="languageToggle" class="lang-toggle" type="button" aria-label="Switch language">PT</button>
+      <a class="header-cta" href="mailto:davimello.persona@gmail.com"><span data-en="Start a project" data-pt="Iniciar projeto">Start a project</span><i data-lucide="arrow-up-right"></i></a>
     </div>
   </header>
 
   <main id="top">
-    <section class="intro-story" aria-label="Introduction and about">
+    <section class="intro-story" aria-label="Introduction">
       <div class="intro-sticky">
-        <div class="intro-grid" aria-hidden="true"></div>
-
         <div class="hero-copy">
-          <div class="eyebrow" data-i18n="hero.kicker">CREATIVE FRONT-END • PRODUCT DESIGN • MOTION</div>
-          <h1 class="hero-title"><span data-i18n="hero.hello">Hello,</span><span><span data-i18n="hero.iam">I am Davi.</span></span></h1>
-          <p class="hero-sub" data-i18n="hero.sub">I design and build websites and product interfaces where visual systems, motion and front-end engineering work together.</p>
-          <div class="hero-meta"><b data-i18n="hero.meta1">Remote worldwide</b><i></i><b data-i18n="hero.meta2">English / Portuguese</b><i></i><b>React · JavaScript · UI/UX</b></div>
+          <span class="eyebrow" data-en="FRONTEND ENGINEER · PRODUCT DESIGNER · CREATIVE DEVELOPER" data-pt="ENGENHEIRO FRONTEND · PRODUCT DESIGNER · CREATIVE DEVELOPER">FRONTEND ENGINEER · PRODUCT DESIGNER · CREATIVE DEVELOPER</span>
+          <h1><span data-en="Hello," data-pt="Olá,">Hello,</span><br><span data-en="I am Davi." data-pt="eu sou o Davi.">I am Davi.</span></h1>
+          <p data-en="I design and build digital experiences from interface to interaction." data-pt="Eu desenho e construo experiências digitais da interface à interação.">I design and build digital experiences from interface to interaction.</p>
+          <div class="hero-meta"><span data-en="Remote worldwide" data-pt="Remoto para o mundo">Remote worldwide</span><i></i><span>React · JavaScript · UI/UX · GSAP</span></div>
         </div>
 
-        <div class="identity-square" id="identitySquare">
-          <div class="square-glow" aria-hidden="true"></div>
-          <div class="identity-mini">DM</div>
-          <div class="identity-content">
-            <div class="about-copy">
-              <span class="section-number" data-i18n="about.kicker">ABOUT / PROFILE</span>
-              <h2><span data-i18n="about.titleA">I build digital products that</span> <em data-i18n="about.titleB">feel intentional.</em></h2>
-              <p data-i18n="about.copy">I work across front-end development, product design, motion systems, responsive QA and visual direction. I use AI as an accelerator for iteration and problem-solving — not as a substitute for taste.</p>
-              <div class="about-status"><span><i></i><b data-i18n="about.available">Available for remote work</b></span><span>Front-end · Product · Motion</span><span>GitHub-first workflow</span></div>
+        <div class="skill-ribbon" aria-label="Skills">
+          <div class="skill-track" id="skillTrack">
+            <span>Frontend Engineering</span><b></b><span>Product Design</span><b></b><span>Motion Design</span><b></b><span>Creative Development</span><b></b><span>React</span><b></b><span>JavaScript</span><b></b><span>Responsive Systems</span><b></b><span>Interaction Design</span><b></b><span>UI/UX</span><b></b><span>Performance</span><b></b><span>AI Workflows</span><b></b>
+            <span>Frontend Engineering</span><b></b><span>Product Design</span><b></b><span>Motion Design</span><b></b><span>Creative Development</span><b></b><span>React</span><b></b><span>JavaScript</span><b></b><span>Responsive Systems</span><b></b><span>Interaction Design</span><b></b><span>UI/UX</span><b></b><span>Performance</span><b></b><span>AI Workflows</span><b></b>
+          </div>
+        </div>
+
+        <div class="identity-surface" id="identitySurface">
+          <div class="surface-light" aria-hidden="true"></div>
+          <div class="surface-mark">DM</div>
+          <div class="surface-content" id="surfaceContent">
+            <div class="surface-copy">
+              <span class="section-kicker">01 / ABOUT</span>
+              <h2 data-en="I design, build and polish digital products from interface to interaction." data-pt="Eu desenho, construo e refino produtos digitais da interface à interação.">I design, build and polish digital products from interface to interaction.</h2>
+              <p data-en="My work sits between frontend engineering, product design, motion, responsive systems and QA. I use AI to accelerate iteration while keeping product direction and taste human." data-pt="Meu trabalho fica entre engenharia frontend, product design, motion, sistemas responsivos e QA. Uso IA para acelerar a iteração mantendo direção de produto e bom gosto humanos.">My work sits between frontend engineering, product design, motion, responsive systems and QA. I use AI to accelerate iteration while keeping product direction and taste human.</p>
             </div>
-            <div class="capabilities">
-              <article class="capability"><span class="cap-no">01</span><i data-lucide="code-2"></i><h3 data-i18n="cap.front">Front-end engineering</h3><p data-i18n="cap.frontCopy">Responsive interfaces, reusable components, performance and browser QA.</p></article>
-              <article class="capability"><span class="cap-no">02</span><i data-lucide="panels-top-left"></i><h3 data-i18n="cap.product">Product design</h3><p data-i18n="cap.productCopy">Hierarchy, flows, systems and interaction decisions that survive implementation.</p></article>
-              <article class="capability"><span class="cap-no">03</span><i data-lucide="sparkles"></i><h3 data-i18n="cap.motion">Motion systems</h3><p data-i18n="cap.motionCopy">Scroll choreography, micro-interactions, transitions and meaningful feedback.</p></article>
-              <article class="capability"><span class="cap-no">04</span><i data-lucide="brain-circuit"></i><h3 data-i18n="cap.ai">AI workflows</h3><p data-i18n="cap.aiCopy">Fast prototyping, debugging and iteration while keeping human direction in control.</p></article>
+            <div class="capability-grid">
+              <article><span>01</span><h3>Frontend Engineering</h3><p>React, JavaScript, component architecture, responsive systems, API integration, debugging and performance.</p></article>
+              <article><span>02</span><h3>Product & UI</h3><p>Product Design, UI/UX, user flows, responsive UI, design systems and prototyping.</p></article>
+              <article><span>03</span><h3>Creative Development</h3><p>GSAP, ScrollTrigger, micro-interactions, motion systems, canvas and scrollytelling.</p></article>
+              <article><span>04</span><h3>AI-native Workflows</h3><p>Codex, ChatGPT, Claude Code, research, debugging and rapid prototyping.</p></article>
             </div>
           </div>
         </div>
 
-        <div class="skill-tape" aria-label="Skills">
-          <div class="skill-track">
-            <span>Front-end Engineering</span><b></b><span>Product Design</span><b></b><span>Motion Design</span><b></b><span>Creative Development</span><b></b><span>React</span><b></b><span>JavaScript</span><b></b><span>HTML / CSS</span><b></b><span>Responsive Systems</span><b></b><span>UI / UX</span><b></b><span>QA & Performance</span><b></b><span>AI Workflows</span><b></b>
-            <span>Front-end Engineering</span><b></b><span>Product Design</span><b></b><span>Motion Design</span><b></b><span>Creative Development</span><b></b><span>React</span><b></b><span>JavaScript</span><b></b><span>HTML / CSS</span><b></b><span>Responsive Systems</span><b></b><span>UI / UX</span><b></b><span>QA & Performance</span><b></b><span>AI Workflows</span><b></b>
-          </div>
+        <div class="scroll-cue"><span data-en="Scroll to enter" data-pt="Role para entrar">Scroll to enter</span><i></i></div>
+      </div>
+    </section>
+
+    <section class="manifesto" aria-label="Motion philosophy">
+      <div class="manifesto-inner">
+        <span class="section-kicker">02 / MOTION</span>
+        <div class="manifesto-lines">
+          <p data-manifesto="0" data-en="Interfaces should not just appear." data-pt="Interfaces não deveriam apenas aparecer.">Interfaces should not just appear.</p>
+          <p data-manifesto="1" data-en="They should respond." data-pt="Elas deveriam responder.">They should respond.</p>
+          <p data-manifesto="2" data-en="Transform." data-pt="Transformar.">Transform.</p>
+          <p data-manifesto="3" data-en="Explain." data-pt="Explicar.">Explain.</p>
         </div>
-        <div class="scroll-prompt"><span data-i18n="hero.scroll">Scroll to meet me</span><i></i></div>
-        <div class="intro-index" aria-hidden="true"><span>01</span><i></i><b>02</b></div>
       </div>
     </section>
 
     <section class="motion-story" id="motion" aria-label="Motion showcase">
       <div class="motion-sticky">
-        <div class="motion-header">
-          <span class="section-number">02 / MOTION SYSTEMS</span>
-          <h2 data-i18n="motion.title">Motion should explain the interface.</h2>
-          <p data-i18n="motion.copy">Not decoration. Not a reel. Each scene below is running live in the browser and can be interacted with.</p>
+        <div class="motion-heading">
+          <span class="section-kicker">03 / LIVE INTERACTIONS</span>
+          <h2 data-en="Motion should explain the interface." data-pt="Motion deve explicar a interface.">Motion should explain the interface.</h2>
+          <p data-en="Each scene below is interactive and running in the browser." data-pt="Cada cena abaixo é interativa e está rodando no navegador.">Each scene below is interactive and running in the browser.</p>
         </div>
 
         <div class="motion-stage">
-          <article class="motion-scene is-active" data-motion="0">
-            <div class="scene-top"><div><i></i><i></i><i></i><span>responsive-state.js</span></div><b>01 / 06</b></div>
-            <div class="scene-body"><div class="scene-copy"><h3 data-i18n="motion.resize">Responsive geometry</h3><p data-i18n="motion.resizeCopy">One component changes shape without losing hierarchy or rhythm.</p></div><div class="demo-surface">
-              <div class="resize-card" id="resizeCard"><div class="resize-nav"><i></i><i></i><i></i></div><div class="resize-main"><b></b><span></span><div class="resize-grid"><i></i><i></i><i></i><i></i></div></div></div>
-              <button class="scene-button" id="resizeToggle" type="button" data-i18n="motion.toggle">Change size</button>
-            </div></div>
+          <article class="motion-scene is-active" data-scene="0">
+            <div class="scene-copy"><span>01 / RESPONSIVE</span><h3>Responsive geometry</h3><p>One component changes shape without losing hierarchy.</p></div>
+            <div class="demo-panel">
+              <div class="resize-demo" id="resizeDemo"><div class="mini-top"><i></i><i></i><i></i></div><div class="mini-copy"><b></b><span></span><span></span></div><div class="mini-grid"><i></i><i></i><i></i></div></div>
+              <button class="demo-button" id="resizeToggle" type="button">Change state</button>
+            </div>
           </article>
 
-          <article class="motion-scene" data-motion="1">
-            <div class="scene-top"><div><i></i><i></i><i></i><span>state-travel.js</span></div><b>02 / 06</b></div>
-            <div class="scene-body"><div class="scene-copy"><h3 data-i18n="motion.tabs">State that travels</h3><p data-i18n="motion.tabsCopy">Selection moves through the interface instead of blinking between unrelated states.</p></div><div class="demo-surface"><div class="tab-demo">
-              <div class="t-tabs" role="tablist" data-tabs><span class="t-tabs-pill" aria-hidden="true"></span><button class="t-tab" role="tab" aria-selected="true">Plan</button><button class="t-tab" role="tab" aria-selected="false">Build</button><button class="t-tab" role="tab" aria-selected="false">Polish</button></div>
-              <div class="tab-output"><span>ACTIVE STATE</span><strong>Plan</strong><i></i></div>
-            </div></div></div>
+          <article class="motion-scene" data-scene="1">
+            <div class="scene-copy"><span>02 / STATE</span><h3>State should travel.</h3><p>Selection moves physically instead of blinking between unrelated states.</p></div>
+            <div class="demo-panel">
+              <div class="travel-tabs" id="travelTabs"><span class="travel-pill"></span><button class="is-selected">Plan</button><button>Build</button><button>Polish</button></div>
+              <div class="state-readout"><small>ACTIVE STATE</small><strong id="activeState">Plan</strong></div>
+            </div>
           </article>
 
-          <article class="motion-scene" data-motion="2">
-            <div class="scene-top"><div><i></i><i></i><i></i><span>neighbour-motion.js</span></div><b>03 / 06</b></div>
-            <div class="scene-body"><div class="scene-copy"><h3 data-i18n="motion.avatar">Neighbour-aware hover</h3><p data-i18n="motion.avatarCopy">Nearby items react with falloff, so the group behaves like one physical system.</p></div><div class="demo-surface"><div class="avatar-group" id="avatarGroup"><div class="t-avatar">UI</div><div class="t-avatar">JS</div><div class="t-avatar">UX</div><div class="t-avatar">FE</div><div class="t-avatar">AI</div></div></div></div>
+          <article class="motion-scene" data-scene="2">
+            <div class="scene-copy"><span>03 / RELATIONSHIP</span><h3>Interfaces react together.</h3><p>Hovering one item influences its neighbours with proportional falloff.</p></div>
+            <div class="demo-panel">
+              <div class="falloff-group" id="falloffGroup"><button>UI</button><button>JS</button><button>UX</button><button>FE</button><button>AI</button></div>
+            </div>
           </article>
 
-          <article class="motion-scene" data-motion="3">
-            <div class="scene-top"><div><i></i><i></i><i></i><span>dissolve-feedback.js</span></div><b>04 / 06</b></div>
-            <div class="scene-body"><div class="scene-copy"><h3 data-i18n="motion.clear">Dissolve feedback</h3><p data-i18n="motion.clearCopy">Even removing text can communicate what changed and where the state went.</p></div><div class="demo-surface"><div class="t-clear has-value" id="clearWrap">
-              <input id="clearInput" value="Motion should explain change" aria-label="Motion demo input" /><div class="t-clear-mirror" aria-hidden="true">Motion should explain change</div><div class="t-clear-placeholder" aria-hidden="true">Type something…</div><div class="t-clear-glow" aria-hidden="true"></div><button class="t-clear-btn" id="clearButton" type="button" aria-label="Clear"><i data-lucide="x"></i></button>
-            </div></div></div>
+          <article class="motion-scene" data-scene="3">
+            <div class="scene-copy"><span>04 / FEEDBACK</span><h3>Feedback needs context.</h3><p>Updates stack in depth and expand without becoming visual noise.</p></div>
+            <div class="demo-panel">
+              <div class="toast-stack" id="toastStack"></div>
+              <button class="demo-button" id="addToast" type="button">Add update</button>
+            </div>
           </article>
 
-          <article class="motion-scene" data-motion="4">
-            <div class="scene-top"><div><i></i><i></i><i></i><span>context-stack.js</span></div><b>05 / 06</b></div>
-            <div class="scene-body"><div class="scene-copy"><h3 data-i18n="motion.stack">Context in depth</h3><p data-i18n="motion.stackCopy">Updates stack with hierarchy and expand without becoming visual noise.</p></div><div class="demo-surface"><div class="t-stack" id="toastStack"></div><button class="scene-button" id="addToast" type="button" data-i18n="motion.add">Add update</button></div></div>
-          </article>
-
-          <article class="motion-scene" data-motion="5">
-            <div class="scene-top"><div><i></i><i></i><i></i><span>surface-morph.js</span></div><b>06 / 06</b></div>
-            <div class="scene-body"><div class="scene-copy"><h3 data-i18n="motion.morph">Surface morph</h3><p data-i18n="motion.morphCopy">A small control grows into a useful surface without feeling like a modal interruption.</p></div><div class="demo-surface"><div class="t-morph" id="morphMenu" data-open="false"><div class="t-morph-menu"><a href="#work">Work <span>↗</span></a><a href="#pricing">Pricing <span>↗</span></a><a href="#contact">Contact <span>↗</span></a></div><button class="t-morph-plus" id="morphButton" type="button" aria-expanded="false" aria-label="Open menu"><i data-lucide="plus"></i></button></div></div></div>
+          <article class="motion-scene" data-scene="4">
+            <div class="scene-copy"><span>05 / MORPH</span><h3>One surface. Multiple states.</h3><p>A compact control becomes a useful menu without a modal interruption.</p></div>
+            <div class="demo-panel">
+              <div class="morph-control" id="morphControl">
+                <div class="morph-links"><a href="#work">Work <i data-lucide="arrow-up-right"></i></a><a href="#pricing">Pricing <i data-lucide="arrow-up-right"></i></a><a href="#contact">Contact <i data-lucide="arrow-up-right"></i></a></div>
+                <button id="morphToggle" type="button" aria-expanded="false"><i data-lucide="plus"></i></button>
+              </div>
+            </div>
           </article>
         </div>
 
-        <div class="motion-nav"><div class="motion-dots" aria-hidden="true"><span class="motion-dot"><i></i></span><span class="motion-dot"><i></i></span><span class="motion-dot"><i></i></span><span class="motion-dot"><i></i></span><span class="motion-dot"><i></i></span><span class="motion-dot"><i></i></span></div><span class="motion-caption"><b id="motionCurrent">01</b> / 06</span></div>
+        <div class="motion-progress"><span id="motionNumber">01</span><i><b id="motionBar"></b></i><span>05</span></div>
       </div>
     </section>
 
     <section class="work-section" id="work">
-      <div class="shell work-intro">
-        <span class="section-number" data-i18n="work.kicker">SELECTED DEMOS</span>
-        <div class="section-head"><span></span><div><h2 data-i18n="work.title">Three briefs. Three different systems.</h2><p data-i18n="work.copy">The point is not one visual style. It is showing that I can build a system around the problem in front of me.</p></div></div>
+      <div class="section-shell section-intro">
+        <span class="section-kicker">04 / SELECTED DEMOS</span>
+        <h2 data-en="Three briefs. Three different systems." data-pt="Três briefings. Três sistemas diferentes.">Three briefs. Three different systems.</h2>
+        <p data-en="Range matters. Each demo is a separate product context, not the same template with a new color." data-pt="Amplitude importa. Cada demo é um contexto de produto separado, não o mesmo template com outra cor.">Range matters. Each demo is a separate product context, not the same template with a new color.</p>
       </div>
 
-      <div class="shell case-stack">
-        <article class="case-card">
-          <div class="case-inner"><div class="case-copy"><div><span class="case-no">01 / CAMPAIGN</span><h3 data-i18n="case1.title">Editorial campaign</h3><p data-i18n="case1.copy">A conversion-focused campaign page built around large type, pacing and cinematic movement.</p><div class="case-tags"><span>HTML/CSS</span><span>JavaScript</span><span>Scroll Motion</span></div></div><a class="case-link magnetic" href="./demo1/" target="_blank"><span data-i18n="case.open">Open live demo</span><i data-lucide="arrow-up-right"></i></a></div><div class="case-visual"><div class="demo-browser"><div class="demo-bar"><i></i><i></i><i></i><span>/demo1</span></div><div class="campaign-body"><span class="campaign-kicker">DESIGN / CULTURE / RELEASE</span><div class="campaign-word">MAKE IT<br><em>MOVE.</em></div><div class="campaign-lines"></div><div class="campaign-orb"></div></div></div></div></div>
+      <div class="case-chapters section-shell">
+        <article class="case-chapter">
+          <div class="case-copy"><span>01 / EDITORIAL</span><h3>Campaign experience</h3><p>Large typography, pacing, storytelling and motion for a campaign-led landing experience.</p><div class="case-actions"><a href="./demo1/" target="_blank" rel="noopener">Live demo <i data-lucide="arrow-up-right"></i></a><a href="https://github.com/DaMello/DaMello.github.io/tree/main/demo1" target="_blank" rel="noopener">Source <i data-lucide="github"></i></a></div></div>
+          <div class="case-visual campaign-visual"><div class="browser-bar"><i></i><i></i><i></i><span>/demo1</span></div><div class="campaign-type">MAKE IT<br><em>MOVE.</em></div><div class="campaign-line"></div></div>
         </article>
 
-        <article class="case-card">
-          <div class="case-inner"><div class="case-copy"><div><span class="case-no">02 / COMMERCE</span><h3 data-i18n="case2.title">Product commerce</h3><p data-i18n="case2.copy">A responsive product experience focused on browsing, hierarchy and satisfying shopping interactions.</p><div class="case-tags"><span>Responsive UI</span><span>Product</span><span>Interaction</span></div></div><a class="case-link magnetic" href="./demo2/" target="_blank"><span data-i18n="case.open">Open live demo</span><i data-lucide="arrow-up-right"></i></a></div><div class="case-visual"><div class="demo-browser"><div class="demo-bar"><i></i><i></i><i></i><span>/demo2</span></div><div class="commerce-body"><div class="commerce-copy"><small>NEW COLLECTION</small><strong>Objects<br>worth keeping.</strong><p>Clean browsing, focused product hierarchy and subtle feedback.</p></div><div class="commerce-products"><div class="product-shape one"></div><div class="product-shape two"></div><div class="product-bubble"></div></div></div></div></div></div>
+        <article class="case-chapter">
+          <div class="case-copy"><span>02 / COMMERCE</span><h3>Commerce experience</h3><p>Product hierarchy, browse states, shopping interactions and responsive behaviour.</p><div class="case-actions"><a href="./demo2/" target="_blank" rel="noopener">Live demo <i data-lucide="arrow-up-right"></i></a><a href="https://github.com/DaMello/DaMello.github.io/tree/main/demo2" target="_blank" rel="noopener">Source <i data-lucide="github"></i></a></div></div>
+          <div class="case-visual commerce-visual"><div class="browser-bar"><i></i><i></i><i></i><span>/demo2</span></div><div class="product-shot"><span></span><b></b></div><div class="product-copy"><small>ESSENTIAL / 01</small><strong>Form follows use.</strong><p>Responsive product detail · interaction · hierarchy</p></div></div>
         </article>
 
-        <article class="case-card">
-          <div class="case-inner"><div class="case-copy"><div><span class="case-no">03 / PRODUCT UI</span><h3 data-i18n="case3.title">SaaS dashboard</h3><p data-i18n="case3.copy">Dense product UI with reusable components, application states and motion that clarifies data changes.</p><div class="case-tags"><span>React-ready</span><span>Components</span><span>Data UI</span></div></div><a class="case-link magnetic" href="./demo3/" target="_blank"><span data-i18n="case.open">Open live demo</span><i data-lucide="arrow-up-right"></i></a></div><div class="case-visual"><div class="demo-browser"><div class="demo-bar"><i></i><i></i><i></i><span>/demo3</span></div><div class="dashboard-body"><div class="dash-side"><i></i><i></i><i></i><i></i></div><div class="dash-main"><div class="dash-head"><b>Overview</b><span></span></div><div class="dash-metrics"><i></i><i></i><i></i></div><div class="dash-chart"><b style="--h:44%"></b><b style="--h:68%"></b><b style="--h:52%"></b><b style="--h:84%"></b><b style="--h:72%"></b><b style="--h:94%"></b><b style="--h:79%"></b></div></div></div></div></div></div>
+        <article class="case-chapter">
+          <div class="case-copy"><span>03 / PRODUCT UI</span><h3>SaaS interface</h3><p>Dense product UI, reusable components, navigation, responsive states and data hierarchy.</p><div class="case-actions"><a href="./demo3/" target="_blank" rel="noopener">Live demo <i data-lucide="arrow-up-right"></i></a><a href="https://github.com/DaMello/DaMello.github.io/tree/main/demo3" target="_blank" rel="noopener">Source <i data-lucide="github"></i></a></div></div>
+          <div class="case-visual saas-visual"><div class="browser-bar"><i></i><i></i><i></i><span>/demo3</span></div><aside></aside><div class="dash-grid"><b></b><b></b><span></span><span></span><span></span></div></div>
         </article>
       </div>
     </section>
 
-    <section class="credibility">
-      <div class="shell cred-panel"><p data-i18n="cred.label">PRODUCTS & SYSTEMS I’VE BUILT ACROSS</p><div class="brand-row"><div class="brand-chip"><strong>Persona</strong><span data-i18n="cred.persona">Conversational product</span></div><div class="brand-chip"><strong>Persona Ads</strong><span data-i18n="cred.ads">Advertising platform</span></div><div class="brand-chip"><strong>Persona Worlds</strong><span data-i18n="cred.worlds">Storytelling system</span></div></div></div>
+    <section class="implementation-section" id="implementation">
+      <div class="section-shell implementation-grid">
+        <div class="implementation-copy"><span class="section-kicker">05 / IMPLEMENTATION</span><h2 data-en="Don't trust the screenshots. Inspect the code." data-pt="Não confie nos screenshots. Inspecione o código.">Don't trust the screenshots. Inspect the code.</h2><p data-en="The portfolio, demos and experiments are public. The implementation is part of the work." data-pt="O portfólio, as demos e os experimentos são públicos. A implementação faz parte do trabalho.">The portfolio, demos and experiments are public. The implementation is part of the work.</p><a class="primary-link" href="https://github.com/DaMello" target="_blank" rel="noopener">Open GitHub <i data-lucide="arrow-up-right"></i></a></div>
+        <div class="code-surface" aria-label="Architecture overview"><div class="code-top"><i></i><i></i><i></i><span>portfolio / architecture</span></div><pre><code><span>01</span> semantic HTML
+<span>02</span> responsive CSS system
+<span>03</span> GSAP + ScrollTrigger
+<span>04</span> canvas ambient layer
+<span>05</span> reduced-motion path
+<span>06</span> keyboard + focus states
+<span>07</span> static GitHub Pages deploy</code></pre></div>
+      </div>
     </section>
 
-    <section class="github-section" id="github">
-      <div class="shell github-panel">
-        <div class="github-copy"><span class="section-number" data-i18n="github.kicker">OPEN SOURCE / CODE</span><h2 data-i18n="github.title">You can inspect the implementation.</h2><p data-i18n="github.copy">This portfolio and my public experiments live on GitHub. Open the source, inspect the structure and judge the implementation instead of trusting screenshots.</p><a class="github-link magnetic" href="https://github.com/DaMello" target="_blank" rel="noreferrer"><span data-i18n="github.open">Open GitHub</span><i data-lucide="github"></i></a></div>
-        <div class="code-window"><div class="code-top"><i></i><i></i><i></i><span>motion-system.js</span></div><div class="code-body"><span class="c-violet">const</span> experience = {<br>&nbsp;&nbsp;<span class="c-blue">design</span>: <span class="c-green">"intentional"</span>,<br>&nbsp;&nbsp;<span class="c-blue">motion</span>: <span class="c-green">"state-driven"</span>,<br>&nbsp;&nbsp;<span class="c-blue">frontend</span>: <span class="c-green">"responsive"</span>,<br>&nbsp;&nbsp;<span class="c-blue">qa</span>: <span class="c-green">"before shipping"</span><br>};<br><br><span class="c-violet">function</span> <span class="c-white">ship</span>(idea) {<br>&nbsp;&nbsp;<span class="c-violet">return</span> build(polish(test(idea)));<br>}</div></div>
+    <section class="products-section">
+      <div class="section-shell">
+        <div class="section-intro compact"><span class="section-kicker">06 / PRODUCT EXPERIENCE</span><h2 data-en="Products & systems I've worked on." data-pt="Produtos e sistemas em que trabalhei.">Products & systems I've worked on.</h2></div>
+        <div class="product-list">
+          <article><span>01</span><div><h3>Persona</h3><p>Conversational product experience across web and Android, including interface systems, product flows, release work and responsive behaviour.</p></div><b>PRODUCT · FRONTEND · UI/UX</b></article>
+          <article><span>02</span><div><h3>Persona Ads</h3><p>Advertising interface concepts and product surfaces connected to the Persona ecosystem.</p></div><b>PRODUCT · SYSTEMS</b></article>
+          <article><span>03</span><div><h3>Persona Worlds</h3><p>Storytelling-oriented product surfaces designed for longer-form interactive experiences.</p></div><b>INTERACTION · STORYTELLING</b></article>
+        </div>
       </div>
     </section>
 
     <section class="pricing-section" id="pricing">
-      <div class="shell">
-        <span class="section-number" data-i18n="pricing.kicker">FREELANCE / LAUNCH PRICING</span>
-        <div class="section-head"><span></span><div><h2 data-i18n="pricing.title">Small overhead. Serious execution.</h2><p data-i18n="pricing.copy">These are introductory starting points while I build a larger client portfolio. Scope changes the final quote; the standard of execution does not.</p></div></div>
+      <div class="section-shell">
+        <div class="pricing-intro"><span class="section-kicker">07 / SERVICES + PRICING</span><h2 data-en="Good web work can get expensive." data-pt="Bom trabalho web pode ficar caro.">Good web work can get expensive.</h2><p data-en="Launch pricing keeps the entry point lower while the execution standard stays serious." data-pt="Os preços de lançamento mantêm a entrada mais acessível sem reduzir o padrão de execução.">Launch pricing keeps the entry point lower while the execution standard stays serious.</p></div>
 
         <div class="market-context">
-          <div><h3 data-i18n="market.title">2026 market context</h3><p data-i18n="market.copy">Reference ranges are shown for context, not as promises of equivalent scope.</p></div>
-          <div class="market-bars">
-            <div class="market-row"><span data-i18n="market.mine">My landing page</span><div class="market-track"><i style="--w:12%"></i></div><b>US$149+</b></div>
-            <div class="market-row"><span data-i18n="market.upwork">Upwork landing design</span><div class="market-track"><i style="--w:46%"></i></div><b>US$300–1.5k</b></div>
-            <div class="market-row"><span data-i18n="market.clutch">Web design companies</span><div class="market-track"><i style="--w:100%"></i></div><b>US$2k+</b></div>
-            <div class="market-sources">Sources: <a href="https://www.upwork.com/hire/web-designers/" target="_blank" rel="noreferrer">Upwork 2026</a> · <a href="https://clutch.co/web-designers/pricing" target="_blank" rel="noreferrer">Clutch 2026</a></div>
-          </div>
+          <div class="market-head"><span data-en="2026 market context" data-pt="Contexto de mercado em 2026">2026 market context</span><small data-en="Not equivalent scopes — reference only." data-pt="Escopos não equivalentes — apenas referência.">Not equivalent scopes — reference only.</small></div>
+          <div class="market-row"><div><strong>Upwork web designers</strong><a href="https://www.upwork.com/hire/web-designers/cost/" target="_blank" rel="noopener">Source</a></div><span>$15–30/hr median</span><i><b style="--bar:.28"></b></i></div>
+          <div class="market-row"><div><strong>Clutch web design companies</strong><a href="https://clutch.co/web-designers/pricing" target="_blank" rel="noopener">Source</a></div><span>$100–149/hr typical</span><i><b style="--bar:.84"></b></i></div>
+          <div class="market-row mine"><div><strong>DaMello launch pricing</strong><span>Project-based</span></div><span>from $149</span><i><b style="--bar:.16"></b></i></div>
         </div>
 
-        <div class="pricing-grid">
-          <article class="price-card"><div class="price-top"><span>01</span><i data-lucide="layout-template"></i></div><p class="price-label" data-i18n="pricing.landing">LANDING PAGE</p><div class="price"><small>US$</small><strong>149</strong><b>+</b></div><p data-i18n="pricing.landingCopy">One focused responsive page with custom motion, deployment and a performance pass.</p><ul><li>Responsive implementation</li><li>Custom motion & micro-interactions</li><li>Performance / QA pass</li><li>Deployment included</li></ul><a class="price-cta magnetic" href="#contact"><span data-i18n="pricing.start">Start a project</span><i data-lucide="arrow-up-right"></i></a></article>
-          <article class="price-card featured"><div class="price-top"><span>02</span><i data-lucide="panels-top-left"></i></div><p class="price-label" data-i18n="pricing.site">BUSINESS SITE</p><div class="price"><small>US$</small><strong>399</strong><b>+</b></div><p data-i18n="pricing.siteCopy">A polished multi-page presence with responsive design, motion, basic SEO and analytics setup.</p><ul><li>Up to 5 core pages</li><li>Responsive visual system</li><li>Motion & interactions</li><li>Basic SEO + analytics</li></ul><a class="price-cta magnetic" href="#contact"><span data-i18n="pricing.start">Start a project</span><i data-lucide="arrow-up-right"></i></a></article>
-          <article class="price-card"><div class="price-top"><span>03</span><i data-lucide="code-2"></i></div><p class="price-label" data-i18n="pricing.custom">CUSTOM FRONT-END</p><div class="price"><small>US$</small><strong>699</strong><b>+</b></div><p data-i18n="pricing.customCopy">React/product UI, complex responsive states, custom interactions or an existing design that needs serious implementation.</p><ul><li>Reusable components</li><li>Complex responsive states</li><li>Interaction architecture</li><li>QA & polish pass</li></ul><a class="price-cta magnetic" href="#contact"><span data-i18n="pricing.start">Start a project</span><i data-lucide="arrow-up-right"></i></a></article>
+        <div class="service-list">
+          <article><div><span>01</span><h3>Landing Experience</h3></div><p>One focused responsive page with custom visual direction, motion, deployment and performance pass.</p><strong>from US$149</strong><a href="mailto:davimello.persona@gmail.com?subject=Landing%20Experience">Start project <i data-lucide="arrow-up-right"></i></a></article>
+          <article><div><span>02</span><h3>Business Website</h3></div><p>A polished multi-page presence with responsive design, motion, basic SEO and analytics setup.</p><strong>from US$399</strong><a href="mailto:davimello.persona@gmail.com?subject=Business%20Website">Start project <i data-lucide="arrow-up-right"></i></a></article>
+          <article><div><span>03</span><h3>Custom Product Front-end</h3></div><p>Product UI, responsive states, custom interactions or implementation of an existing design system.</p><strong>from US$699</strong><a href="mailto:davimello.persona@gmail.com?subject=Custom%20Product%20Front-end">Start project <i data-lucide="arrow-up-right"></i></a></article>
         </div>
-        <p class="launch-note" data-i18n="pricing.note">Launch pricing — quotes increase with complexity, integrations and content scope.</p>
+      </div>
+    </section>
+
+    <section class="why-section">
+      <div class="section-shell why-grid">
+        <div><span class="section-kicker">08 / WHY DAVI</span><h2 data-en="The overlap is the advantage." data-pt="A vantagem está na sobreposição.">The overlap is the advantage.</h2></div>
+        <div class="why-list"><span>Design + Engineering</span><span>Product mindset</span><span>Motion literacy</span><span>Responsive thinking</span><span>AI-native workflow</span><span>Fast iteration</span><span>QA & performance</span></div>
       </div>
     </section>
 
     <section class="contact-section" id="contact">
-      <div class="contact-orb" aria-hidden="true"></div>
-      <div class="shell contact-inner"><span class="section-number" data-i18n="contact.kicker">LET’S BUILD SOMETHING</span><h2><span data-i18n="contact.a">Have a role,</span><br><em data-i18n="contact.b">project or ambitious idea?</em></h2><p data-i18n="contact.copy">I’m open to remote front-end opportunities, freelance websites, product design and motion-focused interface work.</p><a class="email-link magnetic" href="mailto:davimello.persona@gmail.com"><span>davimello.persona@gmail.com</span><i data-lucide="arrow-up-right"></i></a><div class="footer-row"><strong>DaMello</strong><span>Brasília · Remote worldwide</span><div class="footer-links"><a href="https://github.com/DaMello" target="_blank" rel="noreferrer">GitHub ↗</a><a href="mailto:davimello.persona@gmail.com">Email ↗</a></div></div></div>
+      <div class="section-shell contact-inner">
+        <span class="section-kicker">09 / CONTACT</span>
+        <h2 data-en="Let's build something worth remembering." data-pt="Vamos construir algo que valha a pena lembrar.">Let's build something worth remembering.</h2>
+        <p data-en="Open to remote frontend opportunities, freelance projects and product work." data-pt="Disponível para oportunidades remotas de frontend, projetos freelance e trabalho de produto.">Open to remote frontend opportunities, freelance projects and product work.</p>
+        <div class="contact-actions"><a href="mailto:davimello.persona@gmail.com">davimello.persona@gmail.com <i data-lucide="arrow-up-right"></i></a><a href="https://github.com/DaMello" target="_blank" rel="noopener">GitHub <i data-lucide="arrow-up-right"></i></a></div>
+        <div class="contact-mark">DM</div>
+      </div>
     </section>
   </main>
+
+  <footer><span>DaMello · 2026</span><span data-en="Designed and built in the browser." data-pt="Desenhado e construído no navegador.">Designed and built in the browser.</span></footer>
 </body>
 </html>
