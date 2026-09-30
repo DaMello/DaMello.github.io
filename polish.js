@@ -130,8 +130,20 @@
   css.rel = 'stylesheet';
   css.href = './v3.css?v=20260930-space3';
   document.head.appendChild(css);
-  const script = document.createElement('script');
-  script.src = './v3.js?v=20260930-space3';
-  script.defer = true;
-  document.head.appendChild(script);
+
+  const v3 = document.createElement('script');
+  v3.src = './v3.js?v=20260930-space3';
+  v3.defer = true;
+  v3.addEventListener('load', () => {
+    const aboutCss = document.createElement('link');
+    aboutCss.rel = 'stylesheet';
+    aboutCss.href = './about-v5.css?v=20260930-about5';
+    document.head.appendChild(aboutCss);
+
+    const aboutScript = document.createElement('script');
+    aboutScript.src = './about-v5.js?v=20260930-about5';
+    aboutScript.defer = true;
+    document.head.appendChild(aboutScript);
+  }, { once:true });
+  document.head.appendChild(v3);
 })();
