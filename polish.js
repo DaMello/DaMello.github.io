@@ -143,6 +143,17 @@
     const aboutScript = document.createElement('script');
     aboutScript.src = './about-v5.js?v=20260930-about6';
     aboutScript.defer = true;
+    aboutScript.addEventListener('load', () => {
+      const conversionCss = document.createElement('link');
+      conversionCss.rel = 'stylesheet';
+      conversionCss.href = './conversion-v7.css?v=20260930-conversion7';
+      document.head.appendChild(conversionCss);
+
+      const conversionScript = document.createElement('script');
+      conversionScript.src = './conversion-v7.js?v=20260930-conversion7';
+      conversionScript.defer = true;
+      document.head.appendChild(conversionScript);
+    }, { once:true });
     document.head.appendChild(aboutScript);
   }, { once:true });
   document.head.appendChild(v3);
