@@ -109,7 +109,7 @@
   left:50%!important;top:50%!important;
   width:var(--s)!important;height:var(--s)!important;border-radius:50%!important;
   background:rgba(242,248,255,var(--a))!important;
-  transform:translate(calc(var(--x) - 50%),calc(var(--y) - 50%))!important;
+  transform:translate(var(--x),var(--y)) translate(-50%,-50%)!important;
   box-shadow:0 0 calc(var(--s)*4) rgba(203,224,255,calc(var(--a)*.72))!important;
   animation:moonTwinkle var(--d) ease-in-out var(--delay) infinite alternate!important;
 }
