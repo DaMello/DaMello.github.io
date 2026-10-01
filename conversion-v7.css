@@ -1,0 +1,286 @@
+/* Conversion pass v7 — additive only; preserves the existing visual system */
+
+.sr-only{
+  position:absolute!important;
+  width:1px!important;
+  height:1px!important;
+  padding:0!important;
+  margin:-1px!important;
+  overflow:hidden!important;
+  clip:rect(0,0,0,0)!important;
+  white-space:nowrap!important;
+  border:0!important;
+}
+
+/* Hero offer: direct conversion copy without replacing the moon identity */
+.hero-service-offer{
+  position:absolute;
+  left:50%;
+  bottom:clamp(34px,6.8vh,78px);
+  transform:translateX(-50%);
+  width:min(760px,90vw);
+  z-index:11;
+  text-align:center;
+  display:grid;
+  justify-items:center;
+  gap:12px;
+  pointer-events:auto;
+}
+.hero-service-offer h2{
+  margin:0;
+  font-size:clamp(24px,2.45vw,40px);
+  line-height:1.02;
+  letter-spacing:-.045em;
+  font-weight:580;
+  color:#f7f8fb;
+}
+.hero-service-offer p{
+  margin:0;
+  max-width:680px;
+  font-size:clamp(12px,1.05vw,15px);
+  line-height:1.6;
+  color:rgba(239,244,252,.62);
+}
+.hero-service-actions{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  margin-top:5px;
+  flex-wrap:wrap;
+}
+.hero-service-actions a{
+  min-height:44px;
+  padding:0 18px;
+  border-radius:999px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  text-decoration:none;
+  font-size:12px;
+  font-weight:650;
+  transition:transform .25s cubic-bezier(.22,1,.36,1),background .25s ease,border-color .25s ease;
+}
+.hero-service-actions a:hover{transform:translateY(-2px)}
+.hero-package-cta{
+  color:#f6f8fb;
+  background:rgba(255,255,255,.055);
+  border:1px solid rgba(255,255,255,.12);
+  backdrop-filter:blur(16px);
+}
+.hero-fiverr-cta{
+  color:#08090b;
+  background:#f5f6f8;
+  border:1px solid rgba(255,255,255,.45);
+}
+.hero-fiverr-cta svg{width:14px;height:14px}
+
+/* Header keeps Gmail while adding a direct purchase path */
+.header-gmail-cta{
+  background:rgba(255,255,255,.055)!important;
+  color:#f7f8fb!important;
+  border:1px solid rgba(255,255,255,.1)!important;
+}
+.header-fiverr-cta{
+  background:#f5f6f8!important;
+  color:#08090b!important;
+}
+
+/* Social proof — same single-surface language used elsewhere */
+.social-proof-section{
+  position:relative;
+  z-index:2;
+  padding:140px 0 40px;
+}
+.proof-intro{margin-bottom:42px}
+.proof-intro p{max-width:760px;color:rgba(239,244,252,.58)}
+.proof-metrics{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  margin-bottom:18px;
+}
+.proof-metrics>div{
+  min-height:142px;
+  padding:28px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  border-right:1px solid rgba(255,255,255,.095);
+}
+.proof-metrics>div:last-child{border-right:0}
+.proof-metrics strong{
+  font-size:clamp(28px,3vw,48px);
+  letter-spacing:-.045em;
+  line-height:1;
+  font-weight:580;
+}
+.proof-metrics span{
+  margin-top:10px;
+  color:rgba(239,244,252,.55);
+  font-size:11px;
+  letter-spacing:.02em;
+}
+.testimonial-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+.testimonial-card{
+  min-height:220px;
+  padding:26px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.testimonial-card p{
+  margin:0;
+  font-size:17px;
+  line-height:1.55;
+  letter-spacing:-.02em;
+  color:rgba(247,249,252,.92);
+}
+.testimonial-card div{display:grid;gap:4px}
+.testimonial-card strong{font-size:12px}
+.testimonial-card span{font-size:10px;color:rgba(239,244,252,.45)}
+
+/* Pricing conversion details */
+.launch-pricing-badge{
+  margin:6px 0 18px;
+  padding:16px 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  border:1px solid rgba(255,255,255,.095);
+  border-radius:22px;
+  background:rgba(255,255,255,.025);
+}
+.launch-pricing-badge span{
+  font-size:9px;
+  letter-spacing:.14em;
+  color:rgba(255,255,255,.45);
+  white-space:nowrap;
+}
+.launch-pricing-badge b{
+  font-size:11px;
+  font-weight:500;
+  color:rgba(239,244,252,.68);
+  text-align:right;
+}
+.service-fulfillment{
+  margin:2px 0 10px!important;
+  font-size:10px!important;
+  line-height:1.45!important;
+  color:rgba(239,244,252,.46)!important;
+  letter-spacing:.01em;
+}
+.service-list article>a{
+  border-radius:999px!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  gap:2px!important;
+}
+
+/* Persona Worlds explicitly behaves as a non-link item */
+.product-static{cursor:default!important}
+.product-static:hover{transform:none!important}
+
+/* Final conversion moment — the single intentional color moment */
+.conversion-final-cta{
+  grid-column:1 / -1;
+  margin-top:8px;
+  min-height:124px;
+  padding:26px 28px;
+  border-radius:30px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  text-decoration:none;
+  color:#fff;
+  border:1px solid rgba(161,176,255,.23);
+  background:
+    radial-gradient(circle at 12% 30%,rgba(104,132,255,.22),transparent 40%),
+    radial-gradient(circle at 88% 70%,rgba(178,99,255,.18),transparent 42%),
+    rgba(8,10,18,.82);
+  box-shadow:0 26px 90px rgba(42,51,103,.18),inset 0 1px 0 rgba(255,255,255,.075);
+  backdrop-filter:blur(24px) saturate(128%);
+  transition:transform .3s cubic-bezier(.22,1,.36,1),border-color .25s ease;
+}
+.conversion-final-cta:hover{
+  transform:translateY(-3px);
+  border-color:rgba(183,194,255,.42);
+}
+.conversion-final-cta span{display:grid;gap:8px}
+.conversion-final-cta small{
+  font-size:9px;
+  letter-spacing:.14em;
+  color:rgba(239,244,252,.5);
+}
+.conversion-final-cta strong{
+  font-size:clamp(24px,3vw,42px);
+  font-weight:580;
+  letter-spacing:-.045em;
+}
+.conversion-final-cta>svg{width:28px;height:28px}
+
+/* Mobile safety: keep pinned sections readable and reduce GPU work */
+html,body{max-width:100%;overflow-x:clip}
+
+@media (max-width:900px){
+  .header-actions{gap:7px!important}
+  .header-gmail-cta{display:none!important}
+  .hero-service-offer{bottom:34px}
+  .proof-metrics{grid-template-columns:1fr}
+  .proof-metrics>div{
+    min-height:104px;
+    border-right:0;
+    border-bottom:1px solid rgba(255,255,255,.095);
+  }
+  .proof-metrics>div:last-child{border-bottom:0}
+  .testimonial-grid{grid-template-columns:1fr}
+}
+
+@media (max-width:480px){
+  #ambient{display:none!important}
+  .hero-service-offer{
+    width:88vw;
+    bottom:28px;
+    gap:9px;
+  }
+  .hero-service-offer h2{font-size:22px}
+  .hero-service-offer p{font-size:11px;line-height:1.45}
+  .hero-service-actions{gap:7px}
+  .hero-service-actions a{min-height:40px;padding:0 14px;font-size:11px}
+
+  .header-fiverr-cta{padding:0 12px!important}
+  .header-fiverr-cta span{font-size:0}
+  .header-fiverr-cta span:after{content:'Fiverr';font-size:11px}
+
+  .motion-sticky,
+  .motion-stage,
+  .motion-scene,
+  .demo-panel,
+  .section-shell,
+  .unified-surface{
+    max-width:100%!important;
+    min-width:0!important;
+  }
+  .motion-sticky{overflow:hidden!important}
+  .motion-scene{overflow:hidden!important}
+  .demo-panel{overflow:hidden!important}
+  .scene-copy{max-width:100%!important}
+
+  .social-proof-section{padding-top:96px}
+  .testimonial-card{min-height:180px}
+  .launch-pricing-badge{align-items:flex-start;flex-direction:column}
+  .launch-pricing-badge b{text-align:left}
+  .conversion-final-cta{min-height:112px;padding:22px;border-radius:26px}
+  .conversion-final-cta strong{font-size:24px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .hero-service-actions a,
+  .conversion-final-cta{transition:none!important}
+}
