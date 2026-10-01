@@ -71,9 +71,16 @@
     }
   }
 
+  function removeProofKicker(){
+    const proof = document.querySelector('.social-proof-section');
+    const kicker = proof?.querySelector('.proof-intro .section-kicker');
+    if(kicker) kicker.remove();
+  }
+
   function init(){
     wireFiverrLinks();
     simplifyMotionShowcase();
+    removeProofKicker();
   }
 
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, { once:true });
