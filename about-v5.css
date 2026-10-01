@@ -1,49 +1,126 @@
-/* About v5 — Davi [moon] Mello -> rising About card */
+/* Hero/About v6 — Davi [moon] Mello -> rising About card */
+.about-v5-active .hero-copy,
+.about-v5-active .skill-ribbon,
+.about-v5-active .scroll-cue,
 .about-v5-active .surface-mark,
 .about-v5-active .about-stage-label{display:none!important}
 
+/* OpenAI-inspired top navigation, adapted to Davi Mello */
+.about-v5-active .site-header{
+  position:fixed!important;
+  top:0!important;
+  left:0!important;
+  right:0!important;
+  z-index:100!important;
+  min-height:78px!important;
+  padding:0 clamp(22px,3.6vw,64px)!important;
+  display:grid!important;
+  grid-template-columns:auto minmax(0,1fr) auto!important;
+  align-items:center!important;
+  gap:28px!important;
+  background:linear-gradient(to bottom,rgba(2,3,6,.86),rgba(2,3,6,.28) 70%,transparent)!important;
+  border-bottom:0!important;
+  backdrop-filter:none!important;
+  transform:none!important;
+}
+.about-v5-active .site-header.is-hidden{transform:none!important}
+.about-v5-active .brand{display:flex!important;align-items:center!important;gap:10px!important;color:#fff!important;text-decoration:none!important;white-space:nowrap}
+.about-v5-active .brand span{
+  width:34px!important;height:34px!important;border-radius:50%!important;
+  display:grid!important;place-items:center!important;
+  background:rgba(255,255,255,.055)!important;
+  border:1px solid rgba(255,255,255,.12)!important;
+  font-size:10px!important;font-weight:800!important;letter-spacing:.02em!important;
+  backdrop-filter:blur(12px)!important;
+}
+.about-v5-active .brand b{font-size:16px!important;font-weight:650!important;letter-spacing:-.03em!important}
+.about-v5-active .desktop-nav{
+  display:flex!important;align-items:center!important;gap:clamp(18px,2vw,32px)!important;
+  justify-content:flex-start!important;min-width:0!important;
+}
+.about-v5-active .desktop-nav a{
+  color:rgba(255,255,255,.9)!important;text-decoration:none!important;
+  font-size:12px!important;font-weight:600!important;letter-spacing:-.01em!important;
+  transition:opacity .2s ease!important;white-space:nowrap!important;
+}
+.about-v5-active .desktop-nav a:hover{opacity:.58!important}
+.about-v5-active .header-actions{display:flex!important;align-items:center!important;gap:10px!important}
+.about-v5-active .lang-toggle{
+  width:44px!important;height:34px!important;border-radius:999px!important;
+  background:rgba(255,255,255,.055)!important;border:1px solid rgba(255,255,255,.1)!important;
+}
+.about-v5-active .header-cta{
+  min-height:42px!important;padding:0 18px!important;border-radius:999px!important;
+  background:#f4f5f7!important;color:#08090b!important;border:0!important;
+  font-size:12px!important;font-weight:650!important;gap:7px!important;
+}
+.about-v5-active .header-cta svg{width:14px!important;height:14px!important}
+
+/* Main identity composition */
 .about-v5-active .name-orbit-lockup{
   position:absolute!important;
   left:50%!important;
   top:50%!important;
-  width:min(980px,82vw)!important;
+  width:min(1240px,88vw)!important;
   display:grid!important;
-  grid-template-columns:1fr auto 1fr!important;
+  grid-template-columns:minmax(0,1fr) clamp(250px,27vw,390px) minmax(0,1fr)!important;
   align-items:center!important;
-  gap:clamp(34px,5vw,86px)!important;
-  transform:translate(-50%,-50%);
-  z-index:6!important;
+  gap:clamp(20px,3.8vw,68px)!important;
+  transform:translate(-50%,-50%)!important;
+  z-index:8!important;
   pointer-events:none!important;
 }
-.about-v5-active .name-orbit-lockup span{
+.about-v5-active .name-orbit-lockup>span{
   color:#f7f8fb!important;
-  font-size:clamp(66px,8vw,132px)!important;
-  line-height:.86!important;
+  font-size:clamp(54px,6vw,96px)!important;
+  line-height:.92!important;
   letter-spacing:-.065em!important;
-  font-weight:650!important;
+  font-weight:530!important;
+  text-shadow:0 0 28px rgba(255,255,255,.05)!important;
 }
-.about-v5-active .name-orbit-lockup span:first-child{text-align:right!important}
-.about-v5-active .name-orbit-lockup span:last-child{text-align:left!important}
-.about-v5-active .name-orbit-lockup i{
+.about-v5-active .name-orbit-lockup>span:first-child{text-align:right!important}
+.about-v5-active .name-orbit-lockup>span:last-child{text-align:left!important}
+
+.about-v5-active .moon-stage{
   position:relative!important;
-  display:block!important;
-  width:clamp(96px,10vw,154px)!important;
+  width:100%!important;aspect-ratio:1!important;
+  display:grid!important;place-items:center!important;
+}
+.about-v5-active .moon-core{
+  position:relative!important;
+  z-index:4!important;
+  width:clamp(128px,13.2vw,205px)!important;
   aspect-ratio:1!important;
   border-radius:50%!important;
   background:
-    radial-gradient(circle at 34% 31%,rgba(255,255,255,.72) 0 5%,transparent 6%),
-    radial-gradient(circle at 62% 58%,rgba(84,90,102,.16) 0 10%,transparent 11%),
-    radial-gradient(circle at 42% 72%,rgba(79,85,96,.12) 0 6%,transparent 7%),
-    radial-gradient(circle at 36% 28%,#f0f1f4 0,#d5d8de 44%,#b4bac4 72%,#8e97a5 100%)!important;
+    radial-gradient(circle at 31% 27%,rgba(255,255,255,.86) 0 4%,transparent 5%),
+    radial-gradient(circle at 63% 61%,rgba(74,80,91,.14) 0 9%,transparent 10%),
+    radial-gradient(circle at 38% 70%,rgba(74,80,91,.11) 0 6%,transparent 7%),
+    radial-gradient(circle at 70% 34%,rgba(74,80,91,.08) 0 5%,transparent 6%),
+    radial-gradient(circle at 34% 28%,#f4f5f7 0,#d9dde4 45%,#b5bdc9 74%,#909aa8 100%)!important;
   box-shadow:
-    inset -18px -14px 34px rgba(24,29,39,.25),
-    0 0 42px rgba(220,231,255,.16)!important;
+    inset -20px -14px 36px rgba(25,31,42,.24),
+    0 0 38px rgba(221,232,255,.20),
+    0 0 92px rgba(170,198,255,.09)!important;
 }
+.about-v5-active .moon-orbit-field{position:absolute!important;inset:0!important;z-index:2!important;pointer-events:none!important}
+.about-v5-active .moon-orbit-field i{
+  position:absolute!important;
+  left:50%!important;top:50%!important;
+  width:var(--s)!important;height:var(--s)!important;border-radius:50%!important;
+  background:rgba(242,248,255,var(--a))!important;
+  transform:translate(var(--x),var(--y)) translate(-50%,-50%)!important;
+  box-shadow:0 0 calc(var(--s)*4) rgba(203,224,255,calc(var(--a)*.72))!important;
+  animation:moonTwinkle var(--d) ease-in-out var(--delay) infinite alternate!important;
+}
+.about-v5-active .moon-orbit-field i.warm{background:rgba(255,183,104,var(--a))!important;box-shadow:0 0 calc(var(--s)*4) rgba(255,161,74,calc(var(--a)*.62))!important}
+@keyframes moonTwinkle{from{opacity:.42;filter:blur(0)}to{opacity:1;filter:blur(.15px)}}
 
+/* About card that comes up after the identity frame */
 .about-v5-active #identitySurface{
   position:absolute!important;
   margin:0!important;
-  background:rgba(7,10,16,.78)!important;
+  background:rgba(7,10,16,.80)!important;
   border:1px solid rgba(255,255,255,.105)!important;
   border-radius:30px!important;
   overflow:hidden!important;
@@ -52,29 +129,36 @@
   will-change:left,top,width,height,transform,opacity!important;
 }
 .about-v5-active #surfaceContent{
-  width:100%!important;
-  height:100%!important;
+  width:100%!important;height:100%!important;
   transform-origin:center bottom!important;
   will-change:transform,opacity,filter!important;
 }
 .about-v5-active #identitySurface .surface-copy,
 .about-v5-active #identitySurface .capability-grid{min-height:0!important}
 
+@media (max-width:900px){
+  .about-v5-active .site-header{grid-template-columns:auto 1fr auto!important;gap:16px!important;padding:0 18px!important}
+  .about-v5-active .brand b{display:none!important}
+  .about-v5-active .desktop-nav{gap:16px!important;overflow:hidden!important}
+  .about-v5-active .desktop-nav a:nth-child(3),
+  .about-v5-active .desktop-nav a:nth-child(5){display:none!important}
+}
+
 @media (max-width:760px){
+  .about-v5-active .site-header{min-height:70px!important}
+  .about-v5-active .desktop-nav a:nth-child(n+3){display:none!important}
+  .about-v5-active .header-cta{padding:0 14px!important}
   .about-v5-active .name-orbit-lockup{
-    width:92vw!important;
-    gap:18px!important;
-    grid-template-columns:1fr auto 1fr!important;
+    width:94vw!important;
+    grid-template-columns:1fr clamp(112px,33vw,150px) 1fr!important;
+    gap:10px!important;
   }
-  .about-v5-active .name-orbit-lockup span{font-size:clamp(43px,13vw,74px)!important}
-  .about-v5-active .name-orbit-lockup i{width:clamp(66px,18vw,96px)!important}
-  .about-v5-active #surfaceContent{
-    grid-template-columns:1fr!important;
-    overflow:auto!important;
-  }
+  .about-v5-active .name-orbit-lockup>span{font-size:clamp(34px,11vw,60px)!important}
+  .about-v5-active .moon-core{width:clamp(82px,24vw,116px)!important}
+  .about-v5-active #surfaceContent{grid-template-columns:1fr!important;overflow:auto!important}
   .about-v5-active #identitySurface .surface-copy{border-right:0!important;border-bottom:1px solid rgba(255,255,255,.095)!important}
 }
 
 @media (prefers-reduced-motion:reduce){
-  .about-v5-active .name-orbit-lockup{display:none!important}
+  .about-v5-active .moon-orbit-field i{animation:none!important}
 }

@@ -137,11 +137,11 @@
   v3.addEventListener('load', () => {
     const aboutCss = document.createElement('link');
     aboutCss.rel = 'stylesheet';
-    aboutCss.href = './about-v5.css?v=20260930-about5';
+    aboutCss.href = './about-v5.css?v=20260930-about6';
     document.head.appendChild(aboutCss);
 
     const aboutScript = document.createElement('script');
-    aboutScript.src = './about-v5.js?v=20260930-about5';
+    aboutScript.src = './about-v5.js?v=20260930-about6';
     aboutScript.defer = true;
     document.head.appendChild(aboutScript);
   }, { once:true });
