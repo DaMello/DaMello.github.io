@@ -80,7 +80,7 @@
   function loadProofHotfix(){
     if(document.querySelector('script[data-proof-hotfix]')) return;
     const script = document.createElement('script');
-    script.src = './hotfix-v9.js?v=20261001-proof9';
+    script.src = './hotfix-v9.js?v=20261001-proof10';
     script.defer = true;
     script.dataset.proofHotfix = 'true';
     document.head.appendChild(script);
