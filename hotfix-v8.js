@@ -77,10 +77,20 @@
     if(kicker) kicker.remove();
   }
 
+  function loadProofHotfix(){
+    if(document.querySelector('script[data-proof-hotfix]')) return;
+    const script = document.createElement('script');
+    script.src = './hotfix-v9.js?v=20261001-proof9';
+    script.defer = true;
+    script.dataset.proofHotfix = 'true';
+    document.head.appendChild(script);
+  }
+
   function init(){
     wireFiverrLinks();
     simplifyMotionShowcase();
     removeProofKicker();
+    loadProofHotfix();
   }
 
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, { once:true });
