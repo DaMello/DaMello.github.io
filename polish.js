@@ -1,4 +1,13 @@
 (() => {
+  const gate = document.createElement('style');
+  gate.id = 'dm-render-gate';
+  gate.textContent = 'html.dm-preparing body{visibility:hidden!important}html.dm-preparing{background:#020306!important}';
+  document.head.appendChild(gate);
+  document.documentElement.classList.add('dm-preparing');
+  window.__dmRevealFallback = setTimeout(() => document.documentElement.classList.remove('dm-preparing'), 3500);
+})();
+
+(() => {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const finePointer = window.matchMedia('(pointer: fine)').matches;
 
@@ -154,7 +163,7 @@
       conversionScript.defer = true;
       conversionScript.addEventListener('load', () => {
         const hotfix = document.createElement('script');
-        hotfix.src = './hotfix-v8.js?v=20260930-showcase8';
+        hotfix.src = './hotfix-v8.js?v=20261001-showcase10';
         hotfix.defer = true;
         document.head.appendChild(hotfix);
       }, { once:true });
