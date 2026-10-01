@@ -152,6 +152,12 @@
       const conversionScript = document.createElement('script');
       conversionScript.src = './conversion-v7.js?v=20260930-conversion7';
       conversionScript.defer = true;
+      conversionScript.addEventListener('load', () => {
+        const hotfix = document.createElement('script');
+        hotfix.src = './hotfix-v8.js?v=20260930-showcase8';
+        hotfix.defer = true;
+        document.head.appendChild(hotfix);
+      }, { once:true });
       document.head.appendChild(conversionScript);
     }, { once:true });
     document.head.appendChild(aboutScript);
